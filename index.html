@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -252,11 +253,12 @@
     .award-info .award-title{font-family:var(--font-serif);font-size:1rem;font-weight:600;color:var(--cream);margin-bottom:.15rem}
     .award-info .award-org{font-size:.78rem;color:var(--peach);font-family:var(--font-comic)}
     .award-gallery-col{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
-    .gallery-img{border-radius:14px;overflow:hidden;aspect-ratio:4/3;background:rgba(255,179,138,.1);border:1px solid rgba(255,179,138,.2)}
-    .gallery-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
-    .gallery-img:hover img{transform:scale(1.05)}
-    .gallery-img.wide{grid-column:1/-1;aspect-ratio:16/7}
-    .gallery-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:var(--font-comic);font-size:.72rem;color:rgba(255,232,214,.4);text-align:center;padding:.5rem}
+    .gallery-img{border-radius:14px;overflow:hidden;background:rgba(255,179,138,.1);border:1px solid rgba(255,179,138,.2)}
+    .gallery-img img{width:100%;height:auto;display:block;object-fit:contain;transition:transform .4s ease}
+    .gallery-img:hover img{transform:scale(1.03)}
+    .gallery-img.wide{grid-column:1/-1}
+    .gallery-img.portrait{grid-row:span 2}
+    .gallery-placeholder{min-height:160px;display:flex;align-items:center;justify-content:center;font-family:var(--font-comic);font-size:.72rem;color:rgba(255,232,214,.4);text-align:center;padding:.5rem}
 
     /* ── SKILLS (FIX #7) ─────────────────────────────────── */
     #skills{background:var(--cream)}
@@ -354,7 +356,7 @@
       <div class="hero-title">Global ABM & Marketing Leader &nbsp;·&nbsp; Pipeline Architect &nbsp;·&nbsp; Demand Generation</div>
       <p class="hero-tagline">
         9+ years turning <strong>strategy into revenue</strong> across FinTech, SaaS & beyond —
-        from Bengaluru to APAC, MEA, LATAM & the US.
+        from <strong>India to the world</strong>. 🌍 APAC · MEA · LATAM · US · Europe.
       </p>
       <div class="hero-btns">
         <a class="btn btn-primary" href="#projects">See My Work</a>
@@ -371,7 +373,7 @@
         </span>
         <span class="hero-meta-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-          Open to Opportunities
+          Open to Opportunities · 🇺🇸 US · 🇪🇺 Europe
         </span>
       </div>
       <!-- Skills in first fold -->
@@ -381,7 +383,7 @@
         <span class="hero-skill-chip">🚀 Go-To-Market</span>
         <span class="hero-skill-chip">💡 HubSpot</span>
         <span class="hero-skill-chip">🔗 LinkedIn Ads</span>
-        <span class="hero-skill-chip">🌏 APAC · MEA · LATAM</span>
+        <span class="hero-skill-chip">🌍 APAC · MEA · LATAM · US · Europe</span>
         <span class="hero-skill-chip">🤖 AI-Powered Marketing</span>
         <span class="hero-skill-chip">📊 Pipeline Growth</span>
       </div>
@@ -978,7 +980,7 @@
                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
           <div class="gallery-placeholder" style="display:none">award-netcore-appreciation.jpg<br/>(Certificate of Appreciation)</div>
         </div>
-        <div class="gallery-img">
+        <div class="gallery-img portrait">
           <img src="assets/award-bankai-trophy.jpg" alt="Bankai Collaborative Trailblazer Award"
                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
           <div class="gallery-placeholder" style="display:none">award-bankai-trophy.jpg<br/>(Trailblazer Trophy)</div>
