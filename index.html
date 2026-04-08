@@ -1,413 +1,1199 @@
-ABD.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ankit Bishnu Dash — Global ABM & Marketing Leader</title>
+  <meta name="description" content="Portfolio of Ankit Bishnu Dash — Global ABM & Marketing Leader with 9+ years driving enterprise pipeline growth across FinTech, SaaS, and beyond." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Comic+Neue:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
 
+  <style>
+    /* ── TOKENS ─────────────────────────────────────────── */
+    :root {
+      --cream:        #FFF8F3;
+      --peach-pale:   #FFE8D6;
+      --peach-light:  #FFCBA4;
+      --peach:        #FFB38A;
+      --peach-dark:   #E8845A;
+      --coral:        #D4604A;
+      --brown:        #2D1B0E;
+      --brown-mid:    #5C3A22;
+      --brown-light:  #8B6248;
+      --card:         #FFF2E8;
+      --card-border:  #FFD4B0;
+      --shadow:       rgba(210,100,60,0.12);
+      --shadow-deep:  rgba(210,100,60,0.22);
+      --font-display: 'Bebas Neue','Arial Narrow',sans-serif;
+      --font-serif:   'Playfair Display',Georgia,serif;
+      --font-body:    'DM Sans',system-ui,sans-serif;
+      --font-comic:   'Comic Neue','Comic Sans MS',cursive;
+      --nav-h: 68px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;font-size:16px}
+    body{font-family:var(--font-body);background:var(--cream);color:var(--brown);overflow-x:hidden;line-height:1.6}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
 
+    /* ── UTILITY ─────────────────────────────────────────── */
+    .container{max-width:1100px;margin:0 auto;padding:0 2rem}
+    .section{padding:6rem 0}
+    .section-label{font-family:var(--font-comic);font-size:.8rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--peach-dark);margin-bottom:.6rem}
+    .section-title{font-family:var(--font-serif);font-size:clamp(2rem,4vw,2.8rem);color:var(--brown);font-weight:600;line-height:1.2;margin-bottom:1rem}
+    .section-subtitle{font-size:1.05rem;color:var(--brown-light);max-width:600px;line-height:1.7}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.8rem;border-radius:50px;font-family:var(--font-body);font-weight:600;font-size:.95rem;cursor:pointer;transition:all .25s ease;border:2px solid transparent}
+    .btn-primary{background:var(--brown);color:var(--cream)}
+    .btn-primary:hover{background:var(--coral);transform:translateY(-2px);box-shadow:0 8px 24px var(--shadow-deep)}
+    .btn-outline{background:transparent;color:var(--brown);border-color:var(--brown)}
+    .btn-outline:hover{background:var(--brown);color:var(--cream);transform:translateY(-2px)}
+    .reveal{opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:none}
 
-👋
-Hallo
-· German
-Ankit Bishnu Dash
-Global ABM & Marketing Leader  ·  Pipeline Architect  ·  Demand Generation
-9+ years turning strategy into revenue across FinTech, SaaS & beyond — from India to the world. 🌍 APAC · MEA · LATAM · US · Europe.
-See My Work Download CV
+    /* ── NAV ─────────────────────────────────────────────── */
+    nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);z-index:100;background:rgba(255,248,243,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--peach-pale);display:flex;align-items:center}
+    .nav-inner{max-width:1100px;margin:0 auto;padding:0 2rem;width:100%;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{font-family:var(--font-display);font-size:1.5rem;letter-spacing:.06em;color:var(--brown)}
+    .nav-logo span{color:var(--peach-dark)}
+    .nav-links{display:flex;gap:2rem;list-style:none}
+    .nav-links a{font-size:.88rem;font-weight:500;color:var(--brown-light);letter-spacing:.02em;transition:color .2s}
+    .nav-links a:hover{color:var(--brown)}
+    .nav-cta{font-size:.85rem;font-weight:600;padding:.45rem 1.2rem}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--brown);border-radius:2px;transition:all .3s}
+    /* FIX: mobile menu hidden by default on ALL screen sizes */
+    .mobile-menu{display:none!important}
+    .mobile-menu.open{display:block!important}
 
-Bengaluru, India
+    /* ── HERO ─────────────────────────────────────────────── */
+    #hero{min-height:100vh;padding-top:var(--nav-h);display:flex;align-items:center;background:linear-gradient(135deg,var(--cream) 0%,var(--peach-pale) 60%,#FFE0C8 100%);position:relative;overflow:hidden}
+    #hero::before{content:'';position:absolute;top:-120px;right:-120px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(255,179,138,.18) 0%,transparent 70%);pointer-events:none}
+    #hero::after{content:'';position:absolute;bottom:-80px;left:-80px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(255,200,150,.14) 0%,transparent 70%);pointer-events:none}
+    .hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;max-width:1100px;margin:0 auto;padding:4rem 2rem;width:100%;position:relative;z-index:1}
 
-30K+ LinkedIn Followers
+    /* FIX #1 — Hello in small Comic Sans */
+    .hero-greeting{font-family:var(--font-comic);font-size:clamp(1.4rem,2.5vw,2rem);font-weight:700;font-style:italic;color:var(--peach-dark);letter-spacing:.04em;margin-bottom:.4rem;display:flex;align-items:center;gap:.5rem}
+    .hero-greeting .wave{display:inline-block;animation:wave 2s ease-in-out infinite}
+    @keyframes wave{0%,100%{transform:rotate(0deg)}25%{transform:rotate(18deg)}75%{transform:rotate(-10deg)}}
+    .hero-greeting .word{display:inline-block}
+    .hello-fade-out{animation:fadeSlideOut .3s ease forwards}
+    .hello-fade-in{animation:fadeSlideIn .3s ease forwards}
+    @keyframes fadeSlideOut{from{opacity:1;transform:translateY(0)}to{opacity:0;transform:translateY(-14px)}}
+    @keyframes fadeSlideIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 
-Open to Opportunities · 🇺🇸 US · 🇪🇺 Europe 🎯 ABM 📈 Demand Generation 🚀 Go-To-Market 💡 HubSpot 🔗 LinkedIn Ads 🌍 APAC · MEA · LATAM · US · Europe 🤖 AI-Powered Marketing 📊 Pipeline Growth
-ABD
-Add profile.jpg
-to assets/ folder
+    .hero-name{font-family:var(--font-display);font-size:clamp(2.4rem,5vw,4rem);letter-spacing:.05em;color:var(--brown);margin:.2rem 0 .6rem;line-height:1}
+    .hero-title{font-family:var(--font-serif);font-style:italic;font-size:clamp(1rem,2vw,1.2rem);color:var(--brown-mid);margin-bottom:1.2rem;line-height:1.4}
+    .hero-tagline{font-family:var(--font-comic);font-size:.95rem;color:var(--brown-light);margin-bottom:2rem;line-height:1.7;max-width:460px}
+    .hero-tagline strong{color:var(--peach-dark);font-weight:700}
+    .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.5rem}
+    .hero-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
+    .hero-meta-item{display:flex;align-items:center;gap:.4rem;font-size:.82rem;color:var(--brown-light)}
+    .hero-meta-item svg{width:14px;height:14px;flex-shrink:0}
+    /* Hero skills chips */
+    .hero-skills{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.8rem}
+    .hero-skill-chip{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .85rem;border-radius:50px;background:rgba(232,132,90,.1);border:1.5px solid rgba(232,132,90,.25);color:var(--brown-mid);font-size:.78rem;font-weight:600;font-family:var(--font-body);transition:all .2s}
+    .hero-skill-chip:hover{background:var(--brown);color:var(--cream);border-color:var(--brown);transform:translateY(-1px)}
 
-Available for hire
-9+ Years Experience ✦
-COMPANIES I'VE GROWN WITH
-HALON
-Halon
-BANKAI
-Bankai Group
-NETCORE
-Netcore Cloud
-AiTRILLION
-AiTrillion
-SNP TECH
-SNP Technologies
-NETENRICH
-NetEnrich
-MORDOR INT.
-Mordor Intelligence
-MOBIFIN
-Panamax / MobiFin
-HALON
-Halon
-BANKAI
-Bankai Group
-NETCORE
-Netcore Cloud
-AiTRILLION
-AiTrillion
-SNP TECH
-SNP Technologies
-NETENRICH
-NetEnrich
-MORDOR INT.
-Mordor Intelligence
-MOBIFIN
-Panamax / MobiFin
-WHO I AM
-A Marketer Who Thinks Like a Revenue Leader.
-"He has a ton of expertise but is extremely humble and very open to discuss new ideas. His speed of execution is truly what sets him apart." 
+    /* FIX #2 — Profile photo: blob with fallback */
+    .hero-photo-wrap{display:flex;justify-content:center;align-items:center;position:relative}
+    .hero-photo-blob{width:clamp(280px,40vw,400px);height:clamp(280px,40vw,400px);border-radius:60% 40% 55% 45% / 50% 55% 45% 50%;overflow:hidden;position:relative;background:linear-gradient(135deg,var(--peach-light),var(--peach-dark));box-shadow:0 20px 60px var(--shadow-deep);animation:blobMorph 8s ease-in-out infinite}
+    @keyframes blobMorph{0%{border-radius:60% 40% 55% 45% / 50% 55% 45% 50%}25%{border-radius:45% 55% 40% 60% / 55% 45% 60% 40%}50%{border-radius:55% 45% 60% 40% / 45% 60% 40% 55%}75%{border-radius:40% 60% 45% 55% / 60% 40% 55% 45%}100%{border-radius:60% 40% 55% 45% / 50% 55% 45% 50%}}
+    .hero-photo-blob img{width:100%;height:100%;object-fit:cover;object-position:center top}
+    .photo-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(160deg,var(--peach-light),var(--peach-dark));color:var(--cream);font-family:var(--font-display);font-size:3rem;letter-spacing:.1em}
+    .photo-placeholder small{font-family:var(--font-comic);font-size:.75rem;margin-top:.5rem;opacity:.7;text-align:center;padding:0 1rem}
+    .photo-badge{position:absolute;bottom:-12px;right:-12px;background:var(--cream);border:2px solid var(--card-border);border-radius:16px;padding:.6rem 1rem;display:flex;align-items:center;gap:.5rem;box-shadow:0 4px 20px var(--shadow);font-size:.82rem;font-weight:600;color:var(--brown-mid);white-space:nowrap}
+    .photo-badge .dot{width:8px;height:8px;border-radius:50%;background:#4CAF50;animation:pulseGreen 2s ease-in-out infinite}
+    @keyframes pulseGreen{0%,100%{box-shadow:0 0 0 0 rgba(76,175,80,.4)}50%{box-shadow:0 0 0 6px rgba(76,175,80,0)}}
+    .photo-badge-2{position:absolute;top:10px;left:-20px;background:var(--brown);border-radius:12px;padding:.5rem .9rem;font-family:var(--font-comic);font-size:.78rem;font-weight:700;color:var(--cream);box-shadow:0 4px 16px rgba(45,27,14,.2)}
 
-— Krish Ramachandran, Founder-CEO @ JazzHQ
-ABM
-Demand Gen
-FinTech
-SaaS
-MarTech
-Cybersecurity
-APAC
-MEA
-LATAM
-I'm Ankit Bishnu Dash — a results-driven Global Marketing & ABM Leader with 9+ years of experience driving enterprise pipeline growth, demand generation, and brand expansion across FinTech SaaS, MarTech, Cybersecurity, IT Services, Telecom, and FMCG sectors.
-I've operated across APAC, MEA, LATAM, the US, and India — building ABM frameworks from scratch, generating multi-million-dollar pipelines, and turning dormant prospects into active customers. My approach blends sharp analytical thinking with creative storytelling, always anchored to one north star: revenue impact.
-Beyond the metrics, I care deeply about people. I mentor teams, champion employer branding, and believe the best marketing is built on genuine human connection. Outside work you'll find me exploring AI tools, following thought leaders, and occasionally crafting a cheeky meme or two.
-Get in Touch →
-BY THE NUMBERS
-Impact That Speaks for Itself
-🚀
-€0
-Pipeline Generated at Halon via digital + ABM strategies
-💰
-$0
-USD deal closed via 1:Many + 1:1 ABM campaign (Bankai)
-📈
-0%
-YoY Enterprise Pipeline Growth through strategic ABM
-🎯
-0%
-Increase in MQLs delivered within a single quarter
-📊
-0%
-Uplift in website traffic through innovative campaign formats
-📧
-0
-Meeting requests from a single 60-day email sequence
-✨
-0%
-Brand mentions (up from 5%) via AI-driven search initiatives
-👥
-0+
-LinkedIn recommendations from peers, clients & leaders
-CAREER JOURNEY
-Where I've Built Real Impact
-ABM & Digital Marketing Operations Manager
-Oct 2025 – Present
-Halon · India / Sweden · Remote · Contractual
-	•	Established demand generation function; led end-to-end digital campaigns across Google & LinkedIn
-	•	Elevated brand mentions from 5% to 39% in six months via AI-driven search strategy
-	•	Delivered €4M digital pipeline + €10M additional via ABM strategies
-	•	Built the ABM function from ground up — target markets, personas, industry landing pages
-	•	Achieved 110% uplift in website traffic through innovative campaign formats
-Senior Marketing Manager
-Aug 2024 – Oct 2025
-Panamax – Bankai Group · Bengaluru · Remote
-	•	Defined end-to-end marketing strategies for FinTech SaaS across APAC, MEA, LATAM & US
-	•	Closed a $2M USD deal through a hybrid 1:Many + 1:1 ABM campaign (City Bank Bangladesh)
-	•	Led demand gen programs: Google Ads, LinkedIn Ads, ABM, email, events & webinars
-	•	Spearheaded "Visionaries at Work" series & #SheLeads employer branding initiative
-Manager – Account-Based Marketing (North America)
-Nov 2022 – Jul 2024
-Netcore Cloud · Bengaluru · Remote · ⭐ Star Performer Q1 & Q4
-	•	1:1, 1:Few, 1:Many ABM campaigns targeting US & Canada; boosted qualified leads by 25%
-	•	Closed $50K MRR Walmart deal within 30 days via personalized ABM revival campaign
-	•	Generated 3 enterprise customers from meme-based LinkedIn Ads campaigns
-Manager – ABM (North America)
-May 2022 – Nov 2022
-AiTrillion · Bengaluru
-	•	Acquired 3 new enterprise clients through targeted ABM strategy
-	•	Generated 55 sign-ups via targeted digital advertising; built customer community programs
-Assistant Manager – ABM (EU, MEA, APAC & India)
-Jun 2021 – May 2022
-Netcore Cloud · Hyderabad
-	•	Generated $100K+ MRR pipeline; secured 7 purchase orders across Europe & South America
-	•	Email campaigns achieving 60% open rates and 5% reply rates; increased MQLs by 500
-Marketing Analyst
-Jul 2020 – Jun 2021
-SNP Technologies · Hyderabad · Remote
-	•	Generated 273 MQLs, onboarded 5 new logos; secured 56 meetings with enterprise accounts
-	•	Leveraged Microsoft funding to generate 30 US meetings from C-suite personas
-Marketing Analyst
-Jan 2019 – Jun 2020
-NetEnrich · Hyderabad
-	•	Generated 174 MQLs via cybersecurity ABM campaigns
-	•	Helped add 3 new logos worth $250K MRR through SEO + email outreach
-Digital Marketing Executive
-Jan 2017 – Sep 2018
-Mordor Intelligence · Hyderabad
-	•	Generated 100+ leads/month; added 25 new clients in 1.8 years via Google Ads & social
-	•	2x increase in inbound traffic through SEO collaboration
-ALL PROJECTS
-20 Campaigns. Real Results.
-A full catalogue of campaigns, playbooks, and initiatives — filtered by discipline.
-All (20)
-ABM & Demand Gen
-Content & SEO
-Employer Branding
-Strategy & Enablement
-Creative & Design
-ABM & DEMAND GEN
-Customized BFCM Campaign Leads to 2 Deal Creations
-Netcore Cloud · North America
-2 Deals Created Read Case Study →
-ABM & DEMAND GEN
-3 Deals Generated via Meme-Based LinkedIn Ad Campaign
-Netcore Cloud · North America
-3 Enterprise Deals Read Case Study →
-ABM & DEMAND GEN
-60 Days → 39 Meeting Requests from Automated Email Sequence
-Netcore Cloud · US Market
-39 Meetings in 60 Days Read Case Study →
-ABM & DEMAND GEN
-Generated 3 Enterprise Customers from Meme Ads
-Netcore Cloud · LinkedIn
-3 New Enterprise Logos Read Case Study →
-ABM & DEMAND GEN
-Revitalized 5 Closed-Lost Opportunities from LinkedIn Ads
-Netcore Cloud · Enterprise Accounts
-5 Accounts Revived Read Case Study →
-ABM & DEMAND GEN
-$43K MRR Generated through Precise 1:1 ABM Campaign
-Netcore Cloud · Enterprise 1:1
-$43K MRR Read Case Study →
-ABM & DEMAND GEN
-1:Many + 1:1 ABM Campaign — Converted a $2M USD Deal
-Bankai Group / MobiFin · City Bank Bangladesh
-$2M USD Closed Read Case Study →
-CONTENT & SEO
-AI SEO — Asking AI to Summarize Content with Custom Prompts
-Halon · AI-First Search Strategy
-5% → 39% Brand Mentions Read Case Study →
-CONTENT & SEO
-Content Glossary Helped Halon Increase Traffic by 2x
-Halon · Content Strategy
-2× Traffic Growth Read Case Study →
-CONTENT & SEO
-Strategic Content Creation for Lead Generation
-Bankai Group · TOFU–MOFU–BOFU
-Pipeline Acceleration Read Case Study →
-CONTENT & SEO
-Netcore vs SendGrid — Transition Campaign
-Netcore Cloud · Competitive Content
-Competitor Displacement Read Case Study →
-EMPLOYER BRANDING
-Inside Bankai Series — Culture, People & Purpose
-Bankai Group · Social Media Series
-EVP Programme View Project →
-EMPLOYER BRANDING
-#SheLeads — Women Leaders Initiative at Bankai
-Bankai Group · DE&I Campaign
-DE&I Leadership View Project →
-EMPLOYER BRANDING
-Visionaries at Work — Video Thought Leadership Series
-Bankai Group · LinkedIn Video
-Thought Leadership View Project →
-EMPLOYER BRANDING
-Building Bankai's LinkedIn Presence to 100K Followers
-Bankai Group · LinkedIn Growth
-100K Follower Goal View Project →
-STRATEGY & ENABLEMENT
-Interactive & Touch-Sensitive Demo Panel for Live Events
-Bankai Group · Event Marketing
-Live Event Innovation View Project →
-STRATEGY & ENABLEMENT
-Persona Mapping, Pain Points & KPI Framework for ICP Targeting
-Bankai Group · GTM Strategy
-ICP Framework Built View Project →
-STRATEGY & ENABLEMENT
-ABM Playbook — Active in Netcore's US & APAC Markets
-Netcore Cloud · ABM Framework
-Playbook Deployed View Project →
-CREATIVE & DESIGN
-MobiFin Brochure Designed for Events & Client Meetings
-Bankai / MobiFin · Event Collateral
-Print + Digital Asset View Project →
-CREATIVE & DESIGN
-Sophisticated FinTech Product Brochures for Events & Client Meetings
-Bankai Group · FinTech Collateral
-Multi-Product Suite View Project →
-DEEP DIVES
-Campaigns That Moved the Needle
-Three landmark campaigns — breaking down strategy, execution and outcome.
-1:Many + 1:1 ABM · $2M USD
-City Bank Bangladesh — $2M Partnership
-Bankai Group / MobiFin  ·  Aug 2024  ·  APAC Banking
-Designed a hybrid ABM campaign targeting APAC banking decision-makers with tailored content on digital lending. Built an ongoing content engagement stream and hosted a strategic webinar. The campaign generated 7 high-value meeting requests and culminated in a landmark deal — the largest single contract in the pipeline.
-$2M USD Closed
-7 meeting requests · Strategic APAC banking partnership
-1:1 ABM — SQL Revival
-Walmart Global — $50K MRR in 30 Days
-Netcore Cloud  ·  7-Month Campaign  ·  US Enterprise
-Revived a dormant SQL-stage Walmart Global account with a deeply personalised ABM approach: custom landing pages, competitor benchmarking reports, global case studies, and strategic industry event participation. A patient 7-month nurture converted to an active customer at scale.
-$50K MRR Secured
-Dormant account revived · Closed within 30 days post-campaign
-AI-Powered Search · 6 Months
-Halon — Brand Visibility 5% → 39%
-Halon  ·  6-Month Initiative  ·  Cybersecurity SaaS
-Designed an AI-driven search and content strategy to elevate Halon's brand presence in LLM-based search results. Produced TOFU content tailored for next-gen search algorithms, combined with innovative campaign formats including interactive and meme-driven creatives.
-5% → 39% Brand Mentions
-110% website traffic uplift · AI-first content strategy
-SOCIAL PROOF
-The Proof Is In the People.
-Not just metrics — the humans behind the work. 22+ LinkedIn recommendations spanning 4 continents and every level of leadership.
-22+
-LinkedIn Recommendations
-4
-Continents Represented
-9+
-Years of Trust Built
-30K+
-LinkedIn Followers
-⭐ Featured
-"I can confidently say he sets a very high benchmark in Account-Based Marketing and Performance Marketing. He consistently delivered strong results within committed timelines, without ever compromising on quality or depth."
-AT
-Anuj Trivedi
-Senior Marketing Manager · Worked together for 2+ years
-★★★★★
-"Ankit is a key part of the marketing team at Bankai Group / MobiFin. He's sharp, proactive, and always aligned with what the sales team needs to succeed. He's easy to work with, brings great energy, and is always willing to go the extra mile."
-AF
-Alejandro José Flores Flores
-Business Advisor & FinTech Solution Seller · Bankai
-★★★★★
-"He has a ton of expertise but is extremely humble and very open to discussing new ideas. His speed of execution is truly what sets him apart. I wish all the very best in his career."
-KR
-Krish Ramachandran
-Founder-CEO @ JazzHQ · Freshworks alum · Angel Investor
-★★★★★
-"Awesome ABM Marketer, humble to the core and scrappiest copywriter — combinations of qualities that are rare to find. Highly recommended for Enterprise Marketing, ABM Campaigns and sheer fun while working."
-AV
-Ayush Verma
-150x Brands · $90M+ Revenue · Strategic Marketing
-★★★★★
-"ABD's unique blend of creative thinking and attention to results makes him a go-to marketer for his colleagues. Fun fact: His memes on LinkedIn are witty and chuckle worthy."
-AG
-Arun Gopalaswami
-Product & Growth Strategist · B2B, CRM, AI, ABM & GTM
-★★★★★
-"Ankit's experience in ABM campaigns in the UK Market helped us receive double digit inbound leads in Q1 itself. His expertise in understanding market needs makes him a very valuable asset for any GTM team."
-JG
-Jithin George
-Revenue Enablement · SDR Training · Global Markets
-★★★★★
-"I highly recommend ABD as an exceptional Account Based Marketer, LinkedIn ads expert, and demand generation specialist. His copywriting skills are outstanding with a keen eye for crafting compelling content that resonates with target audiences."
-JP
-Jikkumon Philipose
-Account-Based Marketing · GTM · Demand Generation Expert
-★★★★★
-"Ankit has a natural talent for generating highly qualified inbound leads. His knowledge of Account Based Marketing is on par. He always fulfilled all of my requests on MQLs with great speed. He is one of the nicest people to work with."
-AN
-Alston Nadar
-Regional Director – APAC at MongoDB
-★★★★★
-"Ankit was a key member of the ABM team at both Netcore and Panamax, where he showed remarkable talent in targeted marketing campaigns. His unique blend of creative thinking and attention to results makes him a go-to marketer."
-OS
-Omkar Sakpal
-GTM, Product, Growth · Netcore Cloud
+    /* ── COMPANY LOGOS CAROUSEL ──────────────────────────── */
+    #logos{background:var(--cream);padding:3rem 0;border-top:1px solid var(--peach-pale);border-bottom:1px solid var(--peach-pale)}
+    .logos-label{text-align:center;font-family:var(--font-comic);font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--brown-light);margin-bottom:2rem}
+    .logos-track-wrap{overflow:hidden;position:relative}
+    .logos-track-wrap::before,.logos-track-wrap::after{content:'';position:absolute;top:0;bottom:0;width:100px;z-index:2;pointer-events:none}
+    .logos-track-wrap::before{left:0;background:linear-gradient(90deg,var(--cream),transparent)}
+    .logos-track-wrap::after{right:0;background:linear-gradient(-90deg,var(--cream),transparent)}
+    .logos-track{display:flex;align-items:center;gap:0;animation:logoScroll 36s linear infinite;width:max-content}
+    .logos-track:hover{animation-play-state:paused}
+    @keyframes logoScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    .logo-card{display:flex;flex-direction:column;align-items:center;gap:.55rem;padding:0 2.2rem;flex-shrink:0;cursor:default;transition:transform .25s}
+    .logo-card:hover{transform:translateY(-4px)}
+    /* CSS-only branded tile — no external images, always works */
+    .logo-tile{width:120px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;border:1.5px solid;transition:all .3s;opacity:.55;filter:saturate(0)}
+    .logo-card:hover .logo-tile{opacity:1;filter:saturate(1);box-shadow:0 6px 20px rgba(0,0,0,.1)}
+    .logo-tile-inner{font-family:var(--font-display);font-size:1rem;letter-spacing:.06em;text-align:center;line-height:1.1;padding:0 .5rem}
+    .logo-caption{font-family:var(--font-comic);font-size:.65rem;font-weight:700;color:var(--brown-light);letter-spacing:.04em;white-space:nowrap}
+    /* Brand colours per company */
+    .lt-halon{background:#EBF4FF;border-color:#B3D4F5;color:#1A6BC4}
+    .lt-bankai{background:#FFF5EB;border-color:#FFD4A0;color:#C46A1A}
+    .lt-netcore{background:#EBF7FF;border-color:#A0D4F5;color:#0A7BC4}
+    .lt-aitrillion{background:#F0EBFF;border-color:#C4A0F5;color:#6A1AC4}
+    .lt-snp{background:#EBFFEF;border-color:#A0F5B3;color:#1A8C34}
+    .lt-netenrich{background:#FFEBEB;border-color:#F5A0A0;color:#C41A1A}
+    .lt-mordor{background:#F5F0FF;border-color:#D4B3F5;color:#5C1AC4}
+    .lt-panamax{background:#FFF8EB;border-color:#F5D4A0;color:#C48A1A}
 
-Read all 22+ recommendations on LinkedIn
-RECOGNITION
-Honours, Awards & Moments
-🏆
-The Collaborative Trailblazer Award
-Bankai Group / MobiFin · Jan–May 2025 · With Trophy
-⭐
-Star Performer Award — Q1 2023
-Netcore Cloud · ABM (North America) · Bangalore
-⭐
-Star Performer Award — Q4 2023–24
-Netcore Cloud · ABM (Northern USA) · Bangalore
-🎖️
-Certificate of Appreciation
-Netcore Cloud · December 2023 · Signed by CMO
-🥇
-Certificate of Excellence
-Bankai Group · May 2025 · Leadership Recognition
-📜
-ABM — US Market Certificate
-Netcore Cloud · LinkedIn Verified Credential
-award-netcore-q1.jpg
-(Star Performer Q1)
-award-netcore-q4.jpg
-(Star Performer Q4)
-award-netcore-appreciation.jpg
-(Certificate of Appreciation)
-award-bankai-trophy.jpg
-(Trailblazer Trophy)
-award-ceremony.jpg
-(Award Ceremony Photo)
-photo-presenting.jpg
-(Presenting at event)
-TOOLKIT
-Skills & Expertise
-🤖 AI TOOLS FOR MARKETERS
-✦ Claude Code
-✦ Claude Cowork
-ChatGPT / GPT-4
-Perplexity AI
-Jasper AI
-Copy.ai
-Midjourney
-Canva AI
-Notion AI
-HubSpot AI
-Lavender (AI Email)
-Surfer SEO
-Clearbit / Clay
-STRATEGY & CAMPAIGNS
-Account-Based Marketing (ABM)
-Demand Generation
-Go-To-Market Strategy
-Performance Marketing
-Brand Positioning
-Content Strategy
-Sales Enablement
-Global Market Expansion
-Pipeline & Revenue Growth
-PLATFORMS & CRM
-HubSpot
-Salesforce
-Pardot
-Microsoft Dynamics
-Outreach
-Triblio
-RollWorks
-Demandbase
-Terminus
-Influ2
-PAID MEDIA & SEO
-Google Ads
-LinkedIn Ads
-SEO / SEM
-Paid Search
-Retargeting
-Campaign Optimization
-CRO
-A/B Testing
-DATA & INTELLIGENCE
-DiscoverOrg
-Apollo.io
-Lead Scoring
-List Building
-Funnel Analysis
-Marketing Analytics
-SQL
-HTML / CMS
-LET'S CONNECT
-Ready to Build Something Extraordinary?
-Whether you're looking for an ABM leader, demand gen strategist, or a marketing partner who brings both creativity and rigour — I'd love to hear from you.
+    /* ── TICKER ──────────────────────────────────────────── */
+    /* ticker removed */
 
-Send Me an Email
+    /* ── ABOUT ───────────────────────────────────────────── */
+    #about{background:var(--cream)}
+    .about-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:center}
+    .about-quote{font-family:var(--font-comic);font-style:italic;font-size:1.05rem;color:var(--brown-mid);line-height:1.7;padding:1.5rem;background:var(--card);border-left:4px solid var(--peach-dark);border-radius:0 16px 16px 0;margin-bottom:2rem}
+    .about-tags{display:flex;flex-wrap:wrap;gap:.5rem}
+    .tag{display:inline-block;padding:.3rem .9rem;border-radius:50px;background:var(--peach-pale);color:var(--brown-mid);font-size:.82rem;font-weight:500;border:1px solid var(--card-border)}
+    .about-right p{color:var(--brown-mid);line-height:1.8;font-size:1.02rem;margin-bottom:1.2rem}
+    .about-right strong{color:var(--brown)}
 
-LinkedIn · 30K+ Followers
+    /* ── NUMBERS ─────────────────────────────────────────── */
+    #numbers{background:var(--brown);color:var(--cream)}
+    #numbers .section-label{color:var(--peach)}
+    #numbers .section-title{color:var(--cream)}
+    .numbers-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;margin-top:3rem}
+    .number-card{background:rgba(255,248,243,.06);border:1px solid rgba(255,179,138,.2);border-radius:20px;padding:2rem 1.5rem;text-align:center;transition:transform .3s ease,background .3s ease}
+    .number-card:hover{transform:translateY(-6px);background:rgba(255,179,138,.1)}
+    .number-value{font-family:var(--font-display);font-size:clamp(2.5rem,5vw,3.8rem);color:var(--peach-light);letter-spacing:.03em;line-height:1;display:block}
+    .number-label{font-family:var(--font-body);font-size:.88rem;color:rgba(255,232,214,.75);margin-top:.5rem;line-height:1.4}
+    .number-icon{font-size:1.8rem;margin-bottom:.75rem;display:block}
 
-Download CV
-Crafted with ♥ by Ankit Bishnu Dash  ·  LinkedIn  ·  ankitbishnudash@gmail.com  ·  Bengaluru, India
+    /* ── EXPERIENCE ──────────────────────────────────────── */
+    #experience{background:var(--peach-pale)}
+    .timeline{position:relative;margin-top:3rem}
+    .timeline::before{content:'';position:absolute;left:18px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--peach-dark),var(--peach-light))}
+    .timeline-item{display:flex;gap:2rem;margin-bottom:2.5rem;position:relative}
+    .timeline-dot{width:38px;height:38px;border-radius:50%;background:var(--cream);border:3px solid var(--peach-dark);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1rem;box-shadow:0 0 0 6px var(--peach-pale);z-index:1}
+    .timeline-content{flex:1;background:var(--cream);border-radius:20px;padding:1.5rem 1.8rem;box-shadow:0 4px 20px var(--shadow);border:1px solid var(--card-border);transition:transform .25s ease}
+    .timeline-content:hover{transform:translateY(-3px)}
+    .timeline-header{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;flex-wrap:wrap;margin-bottom:.5rem}
+    .timeline-role{font-family:var(--font-serif);font-size:1.1rem;font-weight:600;color:var(--brown)}
+    .timeline-date{font-family:var(--font-comic);font-size:.78rem;font-weight:700;color:var(--peach-dark);white-space:nowrap;padding:.25rem .75rem;background:var(--peach-pale);border-radius:50px}
+    .timeline-company{font-weight:600;font-size:.9rem;color:var(--brown-mid);margin-bottom:.75rem}
+    .timeline-points{list-style:none;font-size:.9rem;color:var(--brown-light);line-height:1.7}
+    .timeline-points li::before{content:'→ ';color:var(--peach-dark);font-weight:700}
+    .timeline-points li+li{margin-top:.3rem}
+
+    /* ── PROJECTS (FIX #3) ───────────────────────────────── */
+    #projects{background:var(--cream)}
+    .projects-filter{display:flex;flex-wrap:wrap;gap:.6rem;margin:2rem 0 2.5rem}
+    .filter-btn{padding:.4rem 1.2rem;border-radius:50px;border:2px solid var(--card-border);background:transparent;color:var(--brown-mid);font-family:var(--font-comic);font-size:.82rem;font-weight:700;cursor:pointer;transition:all .2s}
+    .filter-btn:hover,.filter-btn.active{background:var(--brown);color:var(--cream);border-color:var(--brown)}
+    .projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:1.5rem}
+    .project-card{background:var(--card);border:1px solid var(--card-border);border-radius:20px;padding:1.6rem;transition:transform .25s ease,box-shadow .25s ease;position:relative;overflow:hidden;cursor:pointer}
+    .project-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--peach-dark),var(--peach-light))}
+    .project-card:hover{transform:translateY(-5px);box-shadow:0 16px 40px var(--shadow-deep)}
+    .project-card[data-hidden="true"]{display:none}
+    .project-cat{font-family:var(--font-comic);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--peach-dark);margin-bottom:.6rem}
+    .project-title{font-family:var(--font-serif);font-size:1rem;font-weight:600;color:var(--brown);line-height:1.4;margin-bottom:.5rem}
+    .project-company{font-size:.8rem;color:var(--brown-light);margin-bottom:.8rem}
+    .project-result{display:inline-block;background:var(--brown);color:var(--peach-light);padding:.3rem .9rem;border-radius:50px;font-family:var(--font-display);font-size:.95rem;letter-spacing:.05em}
+    .project-link{display:inline-flex;align-items:center;gap:.3rem;font-size:.78rem;font-weight:600;color:var(--peach-dark);margin-top:.8rem;transition:gap .2s}
+    .project-link:hover{gap:.6rem}
+
+    /* ── CASE STUDIES ────────────────────────────────────── */
+    #cases{background:var(--peach-pale)}
+    .cases-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;margin-top:3rem}
+    .case-card{background:var(--cream);border:1px solid var(--card-border);border-radius:24px;padding:2.2rem;transition:transform .3s ease,box-shadow .3s ease;position:relative;overflow:hidden}
+    .case-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--peach-dark),var(--peach-light))}
+    .case-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px var(--shadow-deep)}
+    .case-badge{display:inline-block;background:var(--brown);color:var(--cream);padding:.3rem .9rem;border-radius:50px;font-family:var(--font-comic);font-size:.75rem;font-weight:700;margin-bottom:1rem}
+    .case-title{font-family:var(--font-serif);font-size:1.3rem;font-weight:600;color:var(--brown);margin-bottom:.5rem}
+    .case-company{font-size:.85rem;color:var(--brown-light);margin-bottom:1.2rem}
+    .case-body{font-size:.9rem;color:var(--brown-mid);line-height:1.7;margin-bottom:1.5rem}
+    .case-result{background:var(--brown);color:var(--peach-light);border-radius:14px;padding:1rem 1.2rem;font-family:var(--font-display);font-size:1.6rem;letter-spacing:.04em;text-align:center;line-height:1.2}
+    .case-result small{display:block;font-family:var(--font-body);font-size:.75rem;color:var(--peach);font-weight:400;letter-spacing:0;margin-top:.2rem}
+
+    /* ── "THE PROOF IS IN THE PEOPLE" — BOLD redesign ───── */
+    /* ── SOCIAL PROOF (Wall of Love) ───────────────────────── */
+    #recommendations{background:var(--brown);position:relative;overflow:hidden;padding:6rem 0}
+    #recommendations::before{content:'';position:absolute;top:-80px;right:-80px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(255,179,138,.07) 0%,transparent 70%);pointer-events:none}
+    #recommendations::after{content:'';position:absolute;bottom:-60px;left:-60px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(255,140,90,.05) 0%,transparent 70%);pointer-events:none}
+    #recommendations .section-label{color:var(--peach)}
+    #recommendations .section-title{color:var(--cream)}
+    #recommendations .section-subtitle{color:rgba(255,232,214,.65)}
+    /* Stats strip */
+    .recs-stats{display:flex;gap:0;margin:2.5rem 0 3.5rem;border:1px solid rgba(255,179,138,.2);border-radius:20px;overflow:hidden;flex-wrap:wrap}
+    .rec-stat{flex:1;min-width:140px;text-align:center;padding:1.8rem 1rem;border-right:1px solid rgba(255,179,138,.15)}
+    .rec-stat:last-child{border-right:none}
+    .rec-stat-num{font-family:var(--font-display);font-size:3.5rem;color:var(--peach-light);display:block;line-height:1;letter-spacing:.03em}
+    .rec-stat-label{font-family:var(--font-comic);font-size:.78rem;color:rgba(255,203,164,.6);margin-top:.3rem;display:block}
+    /* Spotlight featured quote */
+    .rec-spotlight{position:relative;border:1px solid rgba(255,179,138,.22);border-radius:28px;padding:3rem 3.5rem;margin-bottom:3rem;background:rgba(255,179,138,.06);overflow:hidden}
+    .rec-spotlight::before{content:'\201C';font-family:var(--font-serif);font-size:12rem;color:var(--peach-dark);opacity:.12;position:absolute;top:-2rem;left:1.5rem;line-height:1;pointer-events:none}
+    .rec-spotlight-text{font-family:var(--font-serif);font-style:italic;font-size:clamp(1.15rem,2.2vw,1.55rem);color:var(--cream);line-height:1.65;margin-bottom:2rem;position:relative;z-index:1}
+    .rec-spotlight-author{display:flex;align-items:center;gap:1rem;position:relative;z-index:1}
+    .rec-spotlight-avatar{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--peach),var(--coral));display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1.3rem;color:var(--cream);flex-shrink:0;border:2px solid rgba(255,179,138,.3)}
+    .rec-spotlight-name{font-family:var(--font-body);font-weight:700;font-size:1rem;color:var(--peach-light)}
+    .rec-spotlight-role{font-family:var(--font-comic);font-size:.8rem;color:rgba(255,203,164,.6);margin-top:.15rem}
+    .rec-spotlight-badge{position:absolute;top:1.6rem;right:2rem;background:rgba(255,179,138,.15);border:1px solid rgba(255,179,138,.25);border-radius:50px;padding:.35rem .9rem;font-family:var(--font-comic);font-size:.7rem;color:var(--peach);letter-spacing:.06em}
+    /* Wall of Love grid */
+    .wall-of-love{columns:3 320px;gap:1.4rem}
+    .wol-card{break-inside:avoid;background:rgba(255,248,243,.05);border:1px solid rgba(255,179,138,.14);border-radius:20px;padding:1.5rem 1.6rem;margin-bottom:1.4rem;transition:background .3s,border-color .3s}
+    .wol-card:hover{background:rgba(255,179,138,.1);border-color:rgba(255,179,138,.3)}
+    .wol-stars{color:var(--peach);font-size:.75rem;letter-spacing:.05em;margin-bottom:.7rem}
+    .wol-text{font-family:var(--font-comic);font-size:.875rem;color:rgba(255,232,214,.82);line-height:1.7;font-style:italic;margin-bottom:1.1rem}
+    .wol-author{display:flex;align-items:center;gap:.65rem}
+    .wol-avatar{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--peach-dark),var(--brown-mid));display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:.85rem;color:var(--cream);flex-shrink:0}
+    .wol-name{font-weight:600;font-size:.82rem;color:var(--peach-light)}
+    .wol-role{font-size:.7rem;color:rgba(255,203,164,.5)}
+    .recs-linkedin-cta{text-align:center;margin-top:3rem}
+    .recs-linkedin-btn{display:inline-flex;align-items:center;gap:.6rem;padding:.85rem 2.2rem;border-radius:50px;border:1.5px solid rgba(255,179,138,.35);color:var(--peach-light);font-family:var(--font-body);font-weight:600;font-size:.9rem;transition:all .3s;background:rgba(255,179,138,.08)}
+    .recs-linkedin-btn:hover{background:rgba(255,179,138,.2);border-color:rgba(255,179,138,.6);transform:translateY(-2px)}
+
+    /* ── AWARDS & GALLERY ────────────────────────────────── */
+    #awards{background:var(--brown);color:var(--cream)}
+    #awards .section-label{color:var(--peach)}
+    #awards .section-title{color:var(--cream)}
+    .awards-layout{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:3rem;align-items:start}
+    .award-cards-col{display:flex;flex-direction:column;gap:1rem}
+    .award-card{background:rgba(255,248,243,.07);border:1px solid rgba(255,179,138,.2);border-radius:16px;padding:1.2rem 1.5rem;display:flex;align-items:center;gap:1rem;transition:background .25s,transform .25s}
+    .award-card:hover{background:rgba(255,179,138,.12);transform:translateX(4px)}
+    .award-icon{font-size:1.8rem;flex-shrink:0}
+    .award-info .award-title{font-family:var(--font-serif);font-size:1rem;font-weight:600;color:var(--cream);margin-bottom:.15rem}
+    .award-info .award-org{font-size:.78rem;color:var(--peach);font-family:var(--font-comic)}
+    .award-gallery-col{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+    .gallery-img{border-radius:14px;overflow:hidden;aspect-ratio:4/3;background:rgba(255,179,138,.1);border:1px solid rgba(255,179,138,.2)}
+    .gallery-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+    .gallery-img:hover img{transform:scale(1.05)}
+    .gallery-img.wide{grid-column:1/-1;aspect-ratio:16/7}
+    .gallery-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:var(--font-comic);font-size:.72rem;color:rgba(255,232,214,.4);text-align:center;padding:.5rem}
+
+    /* ── SKILLS (FIX #7) ─────────────────────────────────── */
+    #skills{background:var(--cream)}
+    .skills-section{margin-bottom:2.5rem}
+    .skills-heading{font-family:var(--font-comic);font-size:.78rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--peach-dark);margin-bottom:.75rem}
+    .skills-tags{display:flex;flex-wrap:wrap;gap:.5rem}
+    .skill-tag{display:inline-block;padding:.4rem 1rem;border-radius:50px;font-size:.85rem;font-weight:500;background:var(--card);border:1.5px solid var(--card-border);color:var(--brown-mid);transition:all .2s;cursor:default}
+    .skill-tag:hover{background:var(--brown);color:var(--cream);border-color:var(--brown);transform:translateY(-2px)}
+    .skill-tag.ai-tool{background:linear-gradient(135deg,rgba(232,132,90,.12),rgba(255,203,164,.15));border-color:var(--peach)}
+    .skill-tag.ai-tool:hover{background:linear-gradient(135deg,var(--peach-dark),var(--coral));color:var(--cream);border-color:var(--peach-dark)}
+
+    /* ── CONTACT (FIX #4) ────────────────────────────────── */
+    #contact{background:var(--brown);text-align:center;padding:6rem 2rem}
+    #contact .section-label{color:var(--peach)}
+    #contact .section-title{color:var(--cream)}
+    .contact-sub{font-family:var(--font-comic);color:rgba(255,232,214,.7);max-width:500px;margin:0 auto 2.5rem;line-height:1.7}
+    .contact-links{display:flex;justify-content:center;gap:1.2rem;flex-wrap:wrap}
+    .contact-link{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.6rem;border-radius:50px;font-weight:600;font-size:.9rem;transition:all .25s;border:2px solid rgba(255,179,138,.4);color:var(--peach-light)}
+    .contact-link:hover{background:var(--peach-dark);border-color:var(--peach-dark);color:var(--cream);transform:translateY(-2px)}
+    .contact-link.primary{background:var(--peach-dark);border-color:var(--peach-dark);color:var(--cream)}
+    .contact-link.primary:hover{background:var(--cream);color:var(--brown);border-color:var(--cream)}
+
+    /* ── FOOTER ──────────────────────────────────────────── */
+    footer{background:#1E0F06;color:rgba(255,232,214,.45);text-align:center;padding:1.5rem;font-family:var(--font-comic);font-size:.8rem}
+    footer a{color:var(--peach);transition:color .2s}
+    footer a:hover{color:var(--peach-light)}
+
+    /* ── MOBILE ──────────────────────────────────────────── */
+    @media(max-width:820px){
+      .nav-links,.nav-cta{display:none}
+      .hamburger{display:flex}
+      .mobile-menu{position:fixed!important;top:var(--nav-h)!important;left:0!important;right:0!important;background:var(--cream)!important;padding:2rem!important;z-index:99!important;border-bottom:1px solid var(--card-border)!important;box-shadow:0 8px 30px var(--shadow)!important}
+      .mobile-menu.open{display:block!important}
+      .mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:1.2rem}
+      .mobile-menu a{font-size:1.1rem;font-weight:600;color:var(--brown)}
+      .hero-inner{grid-template-columns:1fr;text-align:center;gap:2.5rem}
+      .hero-photo-wrap{order:-1}
+      .hero-btns,.hero-meta{justify-content:center}
+      .hero-tagline{margin:0 auto 2rem}
+      .about-grid{grid-template-columns:1fr;gap:2rem}
+      .photo-badge-2{left:0}
+      .timeline::before{display:none}
+      .timeline-item{flex-direction:column;gap:.75rem}
+      .timeline-dot{display:none}
+      .awards-layout{grid-template-columns:1fr}
+      .award-gallery-col{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:580px){
+      .section{padding:4rem 0}
+      .cases-grid,.projects-grid{grid-template-columns:1fr}
+      .gallery-img.wide{grid-column:unset;aspect-ratio:4/3}
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ──────────────────────────────────────────────────── -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="#hero">ABD<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#numbers">Impact</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#recommendations">Proof</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="btn btn-primary nav-cta" href="mailto:ankitbishnudash@gmail.com">Let's Talk</a>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+    <li><a href="#numbers" onclick="closeMobileMenu()">Impact</a></li>
+    <li><a href="#experience" onclick="closeMobileMenu()">Experience</a></li>
+    <li><a href="#projects" onclick="closeMobileMenu()">Projects</a></li>
+    <li><a href="#recommendations" onclick="closeMobileMenu()">Proof</a></li>
+    <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+  </ul>
+</div>
+
+<!-- ── HERO ─────────────────────────────────────────────────── -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <!-- FIX #1: Small Comic Sans Hello -->
+      <div class="hero-greeting">
+        <span class="wave">👋</span>
+        <span class="word" id="hello-word">Hello</span>
+        <span style="font-size:.75em;opacity:.5;margin-left:.2rem" id="hello-lang">· English</span>
+      </div>
+      <div class="hero-name">Ankit Bishnu Dash</div>
+      <div class="hero-title">Global ABM & Marketing Leader &nbsp;·&nbsp; Pipeline Architect &nbsp;·&nbsp; Demand Generation</div>
+      <p class="hero-tagline">
+        9+ years turning <strong>strategy into revenue</strong> across FinTech, SaaS & beyond —
+        from Bengaluru to APAC, MEA, LATAM & the US.
+      </p>
+      <div class="hero-btns">
+        <a class="btn btn-primary" href="#projects">See My Work</a>
+        <a class="btn btn-outline" href="assets/Ankit_Bishnu_Dash_ATS_CV.docx" download>Download CV</a>
+      </div>
+      <div class="hero-meta">
+        <span class="hero-meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Bengaluru, India
+        </span>
+        <span class="hero-meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          30K+ LinkedIn Followers
+        </span>
+        <span class="hero-meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          Open to Opportunities
+        </span>
+      </div>
+      <!-- Skills in first fold -->
+      <div class="hero-skills">
+        <span class="hero-skill-chip">🎯 ABM</span>
+        <span class="hero-skill-chip">📈 Demand Generation</span>
+        <span class="hero-skill-chip">🚀 Go-To-Market</span>
+        <span class="hero-skill-chip">💡 HubSpot</span>
+        <span class="hero-skill-chip">🔗 LinkedIn Ads</span>
+        <span class="hero-skill-chip">🌏 APAC · MEA · LATAM</span>
+        <span class="hero-skill-chip">🤖 AI-Powered Marketing</span>
+        <span class="hero-skill-chip">📊 Pipeline Growth</span>
+      </div>
+    </div>
+
+    <!-- FIX #2: Profile photo with proper fallback -->
+    <div class="hero-photo-wrap">
+      <div class="hero-photo-blob">
+        <img src="assets/profile.jpg" alt="Ankit Bishnu Dash"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+        <div class="photo-placeholder" style="display:none">
+          ABD
+          <small>Add profile.jpg<br/>to assets/ folder</small>
+        </div>
+      </div>
+      <div class="photo-badge"><span class="dot"></span> Available for hire</div>
+      <div class="photo-badge-2">9+ Years Experience ✦</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── COMPANY LOGOS ─────────────────────────────────────────── -->
+<section id="logos">
+  <div class="logos-label">Companies I've Grown With</div>
+  <div class="logos-track-wrap">
+    <div class="logos-track" id="logosTrack">
+      <!-- SET 1 — pure CSS branded tiles (no internet required) -->
+      <div class="logo-card">
+        <div class="logo-tile lt-halon"><div class="logo-tile-inner">HALON</div></div>
+        <span class="logo-caption">Halon</span>
+      </div>
+      <div class="logo-card">
+        <div class="logo-tile lt-bankai"><div class="logo-tile-inner">BANKAI</div></div>
+        <span class="logo-caption">Bankai Group</span>
+      </div>
+      <div class="logo-card">
+        <div class="logo-tile lt-netcore"><div class="logo-tile-inner">NETCORE</div></div>
+        <span class="logo-caption">Netcore Cloud</span>
+      </div>
+      <div class="logo-card">
+        <div class="logo-tile lt-aitrillion"><div class="logo-tile-inner">AiTRILLION</div></div>
+        <span class="logo-caption">AiTrillion</span>
+      </div>
+      <div class="logo-card">
+        <div class="logo-tile lt-snp"><div class="logo-tile-inner">SNP TECH</div></div>
+        <span class="logo-caption">SNP Technologies</span>
+      </div>
+      <div class="logo-card">
+        <div class="logo-tile lt-netenrich"><div class="logo-tile-inner">NETENRICH</div></div>
+        <span class="logo-caption">NetEnrich</span>
+      </div>
+      <div class="logo-card">
+        <div class="logo-tile lt-mordor"><div class="logo-tile-inner">MORDOR INT.</div></div>
+        <span class="logo-caption">Mordor Intelligence</span>
+      </div>
+      <div class="logo-card">
+        <div class="logo-tile lt-panamax"><div class="logo-tile-inner">MOBIFIN</div></div>
+        <span class="logo-caption">Panamax / MobiFin</span>
+      </div>
+      <!-- SET 2 duplicate for seamless loop -->
+      <div class="logo-card">
+        <div class="logo-tile lt-halon"><div class="logo-tile-inner">HALON</div></div>
+        <span class="logo-caption">Halon</span>
+      </div>
+      <div class="logo-card">
+        <div class="logo-tile lt-bankai"><div class="logo-tile-inner">BANKAI</div></div>
+        <span class="logo-caption">Bankai Group</span>
+      </div>
+      <div class="logo-card">
+        <div class="logo-tile lt-netcore"><div class="logo-tile-inner">NETCORE</div></div>
+        <span class="logo-caption">Netcore Cloud</span>
+      </div>
+      <div class="logo-card">
+        <div class="logo-tile lt-aitrillion"><div class="logo-tile-inner">AiTRILLION</div></div>
+        <span class="logo-caption">AiTrillion</span>
+      </div>
+      <div class="logo-card">
+        <div class="logo-tile lt-snp"><div class="logo-tile-inner">SNP TECH</div></div>
+        <span class="logo-caption">SNP Technologies</span>
+      </div>
+      <div class="logo-card">
+        <div class="logo-tile lt-netenrich"><div class="logo-tile-inner">NETENRICH</div></div>
+        <span class="logo-caption">NetEnrich</span>
+      </div>
+      <div class="logo-card">
+        <div class="logo-tile lt-mordor"><div class="logo-tile-inner">MORDOR INT.</div></div>
+        <span class="logo-caption">Mordor Intelligence</span>
+      </div>
+      <div class="logo-card">
+        <div class="logo-tile lt-panamax"><div class="logo-tile-inner">MOBIFIN</div></div>
+        <span class="logo-caption">Panamax / MobiFin</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ticker removed -->
+
+<!-- ── ABOUT ─────────────────────────────────────────────────── -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-left reveal">
+        <div class="section-label">Who I Am</div>
+        <h2 class="section-title">A Marketer Who Thinks Like a<br/><em>Revenue Leader.</em></h2>
+        <blockquote class="about-quote">
+          "He has a ton of expertise but is extremely humble and very open to discuss new ideas. His speed of execution is truly what sets him apart."
+          <br/><br/>— Krish Ramachandran, Founder-CEO @ JazzHQ
+        </blockquote>
+        <div class="about-tags">
+          <span class="tag">ABM</span><span class="tag">Demand Gen</span><span class="tag">FinTech</span><span class="tag">SaaS</span><span class="tag">MarTech</span><span class="tag">Cybersecurity</span><span class="tag">APAC</span><span class="tag">MEA</span><span class="tag">LATAM</span>
+        </div>
+      </div>
+      <div class="about-right reveal">
+        <p>I'm <strong>Ankit Bishnu Dash</strong> — a results-driven Global Marketing & ABM Leader with <strong>9+ years</strong> of experience driving enterprise pipeline growth, demand generation, and brand expansion across FinTech SaaS, MarTech, Cybersecurity, IT Services, Telecom, and FMCG sectors.</p>
+        <p>I've operated across <strong>APAC, MEA, LATAM, the US, and India</strong> — building ABM frameworks from scratch, generating multi-million-dollar pipelines, and turning dormant prospects into active customers. My approach blends sharp analytical thinking with creative storytelling, always anchored to one north star: <strong>revenue impact.</strong></p>
+        <p>Beyond the metrics, I care deeply about people. I mentor teams, champion employer branding, and believe the best marketing is built on genuine human connection. Outside work you'll find me exploring AI tools, following thought leaders, and occasionally crafting a cheeky meme or two.</p>
+        <a href="mailto:ankitbishnudash@gmail.com" class="btn btn-primary" style="margin-top:1rem">Get in Touch →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── IMPACT NUMBERS ─────────────────────────────────────────── -->
+<section id="numbers" class="section">
+  <div class="container">
+    <div class="section-label">By the Numbers</div>
+    <h2 class="section-title">Impact That Speaks for Itself</h2>
+    <div class="numbers-grid">
+      <div class="number-card reveal"><span class="number-icon">🚀</span><span class="number-value" data-target="14" data-prefix="€" data-suffix="M+">€0</span><span class="number-label">Pipeline Generated at Halon via digital + ABM strategies</span></div>
+      <div class="number-card reveal"><span class="number-icon">💰</span><span class="number-value" data-target="2" data-prefix="$" data-suffix="M">$0</span><span class="number-label">USD deal closed via 1:Many + 1:1 ABM campaign (Bankai)</span></div>
+      <div class="number-card reveal"><span class="number-icon">📈</span><span class="number-value" data-target="30" data-suffix="%">0%</span><span class="number-label">YoY Enterprise Pipeline Growth through strategic ABM</span></div>
+      <div class="number-card reveal"><span class="number-icon">🎯</span><span class="number-value" data-target="45" data-suffix="%">0%</span><span class="number-label">Increase in MQLs delivered within a single quarter</span></div>
+      <div class="number-card reveal"><span class="number-icon">📊</span><span class="number-value" data-target="110" data-suffix="%">0%</span><span class="number-label">Uplift in website traffic through innovative campaign formats</span></div>
+      <div class="number-card reveal"><span class="number-icon">📧</span><span class="number-value" data-target="39" data-suffix=" mtgs">0</span><span class="number-label">Meeting requests from a single 60-day email sequence</span></div>
+      <div class="number-card reveal"><span class="number-icon">✨</span><span class="number-value" data-target="39" data-suffix="%">0%</span><span class="number-label">Brand mentions (up from 5%) via AI-driven search initiatives</span></div>
+      <div class="number-card reveal"><span class="number-icon">👥</span><span class="number-value" data-target="22" data-suffix="+">0+</span><span class="number-label">LinkedIn recommendations from peers, clients & leaders</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EXPERIENCE ─────────────────────────────────────────────── -->
+<section id="experience" class="section">
+  <div class="container">
+    <div class="section-label">Career Journey</div>
+    <h2 class="section-title">Where I've Built<br/><em>Real Impact</em></h2>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">🚀</div>
+        <div class="timeline-content">
+          <div class="timeline-header"><div class="timeline-role">ABM & Digital Marketing Operations Manager</div><div class="timeline-date">Oct 2025 – Present</div></div>
+          <div class="timeline-company">Halon · India / Sweden · Remote · Contractual</div>
+          <ul class="timeline-points">
+            <li>Established demand generation function; led end-to-end digital campaigns across Google & LinkedIn</li>
+            <li>Elevated brand mentions from <strong>5% to 39%</strong> in six months via AI-driven search strategy</li>
+            <li>Delivered <strong>€4M</strong> digital pipeline + <strong>€10M</strong> additional via ABM strategies</li>
+            <li>Built the ABM function from ground up — target markets, personas, industry landing pages</li>
+            <li>Achieved <strong>110% uplift</strong> in website traffic through innovative campaign formats</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">🌏</div>
+        <div class="timeline-content">
+          <div class="timeline-header"><div class="timeline-role">Senior Marketing Manager</div><div class="timeline-date">Aug 2024 – Oct 2025</div></div>
+          <div class="timeline-company">Panamax – Bankai Group · Bengaluru · Remote</div>
+          <ul class="timeline-points">
+            <li>Defined end-to-end marketing strategies for FinTech SaaS across APAC, MEA, LATAM & US</li>
+            <li>Closed a <strong>$2M USD deal</strong> through a hybrid 1:Many + 1:1 ABM campaign (City Bank Bangladesh)</li>
+            <li>Led demand gen programs: Google Ads, LinkedIn Ads, ABM, email, events & webinars</li>
+            <li>Spearheaded "Visionaries at Work" series & #SheLeads employer branding initiative</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">🎯</div>
+        <div class="timeline-content">
+          <div class="timeline-header"><div class="timeline-role">Manager – Account-Based Marketing (North America)</div><div class="timeline-date">Nov 2022 – Jul 2024</div></div>
+          <div class="timeline-company">Netcore Cloud · Bengaluru · Remote · ⭐ Star Performer Q1 & Q4</div>
+          <ul class="timeline-points">
+            <li>1:1, 1:Few, 1:Many ABM campaigns targeting US & Canada; boosted qualified leads by <strong>25%</strong></li>
+            <li>Closed <strong>$50K MRR</strong> Walmart deal within 30 days via personalized ABM revival campaign</li>
+            <li>Generated 3 enterprise customers from meme-based LinkedIn Ads campaigns</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">💡</div>
+        <div class="timeline-content">
+          <div class="timeline-header"><div class="timeline-role">Manager – ABM (North America)</div><div class="timeline-date">May 2022 – Nov 2022</div></div>
+          <div class="timeline-company">AiTrillion · Bengaluru</div>
+          <ul class="timeline-points">
+            <li>Acquired 3 new enterprise clients through targeted ABM strategy</li>
+            <li>Generated 55 sign-ups via targeted digital advertising; built customer community programs</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">🌐</div>
+        <div class="timeline-content">
+          <div class="timeline-header"><div class="timeline-role">Assistant Manager – ABM (EU, MEA, APAC & India)</div><div class="timeline-date">Jun 2021 – May 2022</div></div>
+          <div class="timeline-company">Netcore Cloud · Hyderabad</div>
+          <ul class="timeline-points">
+            <li>Generated <strong>$100K+ MRR</strong> pipeline; secured 7 purchase orders across Europe & South America</li>
+            <li>Email campaigns achieving <strong>60% open rates</strong> and 5% reply rates; increased MQLs by 500</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">📋</div>
+        <div class="timeline-content">
+          <div class="timeline-header"><div class="timeline-role">Marketing Analyst</div><div class="timeline-date">Jul 2020 – Jun 2021</div></div>
+          <div class="timeline-company">SNP Technologies · Hyderabad · Remote</div>
+          <ul class="timeline-points"><li>Generated <strong>273 MQLs</strong>, onboarded 5 new logos; secured 56 meetings with enterprise accounts</li><li>Leveraged Microsoft funding to generate 30 US meetings from C-suite personas</li></ul>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">🔒</div>
+        <div class="timeline-content">
+          <div class="timeline-header"><div class="timeline-role">Marketing Analyst</div><div class="timeline-date">Jan 2019 – Jun 2020</div></div>
+          <div class="timeline-company">NetEnrich · Hyderabad</div>
+          <ul class="timeline-points"><li>Generated <strong>174 MQLs</strong> via cybersecurity ABM campaigns</li><li>Helped add 3 new logos worth <strong>$250K MRR</strong> through SEO + email outreach</li></ul>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot">📱</div>
+        <div class="timeline-content">
+          <div class="timeline-header"><div class="timeline-role">Digital Marketing Executive</div><div class="timeline-date">Jan 2017 – Sep 2018</div></div>
+          <div class="timeline-company">Mordor Intelligence · Hyderabad</div>
+          <ul class="timeline-points"><li>Generated <strong>100+ leads/month</strong>; added 25 new clients in 1.8 years via Google Ads & social</li><li><strong>2x increase</strong> in inbound traffic through SEO collaboration</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROJECTS (FIX #3) ─────────────────────────────────────── -->
+<section id="projects" class="section">
+  <div class="container">
+    <div class="section-label">All Projects</div>
+    <h2 class="section-title">20 Campaigns.<br/><em>Real Results.</em></h2>
+    <p class="section-subtitle">A full catalogue of campaigns, playbooks, and initiatives — filtered by discipline.</p>
+
+    <div class="projects-filter">
+      <button class="filter-btn active" data-filter="all">All (20)</button>
+      <button class="filter-btn" data-filter="abm">ABM & Demand Gen</button>
+      <button class="filter-btn" data-filter="content">Content & SEO</button>
+      <button class="filter-btn" data-filter="brand">Employer Branding</button>
+      <button class="filter-btn" data-filter="strategy">Strategy & Enablement</button>
+      <button class="filter-btn" data-filter="creative">Creative & Design</button>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- ABM & DEMAND GEN -->
+      <div class="project-card" data-cat="abm">
+        <div class="project-cat">ABM & Demand Gen</div>
+        <div class="project-title">Customized BFCM Campaign Leads to 2 Deal Creations</div>
+        <div class="project-company">Netcore Cloud · North America</div>
+        <div class="project-result">2 Deals Created</div>
+        <a class="project-link" href="https://ankitbishnudash.notion.site/Customized-BFCM-campaign-leads-to-2-deal-creation-33381b2727808060844ee796bc9fe70d" target="_blank" rel="noopener">Read Case Study →</a>
+      </div>
+
+      <div class="project-card" data-cat="abm">
+        <div class="project-cat">ABM & Demand Gen</div>
+        <div class="project-title">3 Deals Generated via Meme-Based LinkedIn Ad Campaign</div>
+        <div class="project-company">Netcore Cloud · North America</div>
+        <div class="project-result">3 Enterprise Deals</div>
+        <a class="project-link" href="https://ankitbishnudash.notion.site/3-Deals-generated-via-Meme-based-LinkedIn-ad-campaign-33381b27278080af8327c79ad1c841bb" target="_blank" rel="noopener">Read Case Study →</a>
+      </div>
+
+      <div class="project-card" data-cat="abm">
+        <div class="project-cat">ABM & Demand Gen</div>
+        <div class="project-title">60 Days → 39 Meeting Requests from Automated Email Sequence</div>
+        <div class="project-company">Netcore Cloud · US Market</div>
+        <div class="project-result">39 Meetings in 60 Days</div>
+        <a class="project-link" href="https://ankitbishnudash.notion.site/60-Days-39-Meeting-Requests-from-Automated-Email-Sequence-25d81b27278080a28e72c5be2c16818b" target="_blank" rel="noopener">Read Case Study →</a>
+      </div>
+
+      <div class="project-card" data-cat="abm">
+        <div class="project-cat">ABM & Demand Gen</div>
+        <div class="project-title">Generated 3 Enterprise Customers from Meme Ads</div>
+        <div class="project-company">Netcore Cloud · LinkedIn</div>
+        <div class="project-result">3 New Enterprise Logos</div>
+        <a class="project-link" href="https://ankitbishnudash.notion.site/Generated-3-Enterprise-Customers-from-Meme-Ads-25d81b272780801d9842e2e1c6d0872e" target="_blank" rel="noopener">Read Case Study →</a>
+      </div>
+
+      <div class="project-card" data-cat="abm">
+        <div class="project-cat">ABM & Demand Gen</div>
+        <div class="project-title">Revitalized 5 Closed-Lost Opportunities from LinkedIn Ads</div>
+        <div class="project-company">Netcore Cloud · Enterprise Accounts</div>
+        <div class="project-result">5 Accounts Revived</div>
+        <a class="project-link" href="https://ankitbishnudash.notion.site/Revitalized-5-Closed-Lost-Opportunities-from-LinkedIn-Ads-25d81b272780807f8190d9d864998c09" target="_blank" rel="noopener">Read Case Study →</a>
+      </div>
+
+      <div class="project-card" data-cat="abm">
+        <div class="project-cat">ABM & Demand Gen</div>
+        <div class="project-title">$43K MRR Generated through Precise 1:1 ABM Campaign</div>
+        <div class="project-company">Netcore Cloud · Enterprise 1:1</div>
+        <div class="project-result">$43K MRR</div>
+        <a class="project-link" href="https://ankitbishnudash.notion.site/Generated-a-customer-value-of-43K-in-MRR-through-precise-1-1-ABM-campaign-and-messaging-25d81b2727808070a732fd9fb42f7c51" target="_blank" rel="noopener">Read Case Study →</a>
+      </div>
+
+      <div class="project-card" data-cat="abm">
+        <div class="project-cat">ABM & Demand Gen</div>
+        <div class="project-title">1:Many + 1:1 ABM Campaign — Converted a $2M USD Deal</div>
+        <div class="project-company">Bankai Group / MobiFin · City Bank Bangladesh</div>
+        <div class="project-result">$2M USD Closed</div>
+        <a class="project-link" href="https://ankitbishnudash.notion.site/1-Many-1-1-ABM-Campaign-Converted-2-Mil-USD-Deal-25d81b27278080cca34fe228f8c6bc2b" target="_blank" rel="noopener">Read Case Study →</a>
+      </div>
+
+      <!-- CONTENT & SEO -->
+      <div class="project-card" data-cat="content">
+        <div class="project-cat">Content & SEO</div>
+        <div class="project-title">AI SEO — Asking AI to Summarize Content with Custom Prompts</div>
+        <div class="project-company">Halon · AI-First Search Strategy</div>
+        <div class="project-result">5% → 39% Brand Mentions</div>
+        <a class="project-link" href="https://ankitbishnudash.notion.site/AI-SEO-Asking-AI-to-summarize-the-content-with-customized-prompts-33381b27278080bd8fe5f1e08dc7bc5a" target="_blank" rel="noopener">Read Case Study →</a>
+      </div>
+
+      <div class="project-card" data-cat="content">
+        <div class="project-cat">Content & SEO</div>
+        <div class="project-title">Content Glossary Helped Halon Increase Traffic by 2x</div>
+        <div class="project-company">Halon · Content Strategy</div>
+        <div class="project-result">2× Traffic Growth</div>
+        <a class="project-link" href="https://ankitbishnudash.notion.site/Content-Glossary-helped-Halon-increase-traffic-by-2x-33381b27278080e199bcfc62c637d416" target="_blank" rel="noopener">Read Case Study →</a>
+      </div>
+
+      <div class="project-card" data-cat="content">
+        <div class="project-cat">Content & SEO</div>
+        <div class="project-title">Strategic Content Creation for Lead Generation</div>
+        <div class="project-company">Bankai Group · TOFU–MOFU–BOFU</div>
+        <div class="project-result">Pipeline Acceleration</div>
+        <a class="project-link" href="https://ankitbishnudash.notion.site/Strategic-Content-Creation-for-Lead-Generation-25d81b2727808134afd9ce32ebacc70c" target="_blank" rel="noopener">Read Case Study →</a>
+      </div>
+
+      <div class="project-card" data-cat="content">
+        <div class="project-cat">Content & SEO</div>
+        <div class="project-title">Netcore vs SendGrid — Transition Campaign</div>
+        <div class="project-company">Netcore Cloud · Competitive Content</div>
+        <div class="project-result">Competitor Displacement</div>
+        <a class="project-link" href="https://ankitbishnudash.notion.site/Netcore-vs-SendGrid-Transition-Campaign-25d81b2727808034a40cc235b2e02541" target="_blank" rel="noopener">Read Case Study →</a>
+      </div>
+
+      <!-- EMPLOYER BRANDING -->
+      <div class="project-card" data-cat="brand">
+        <div class="project-cat">Employer Branding</div>
+        <div class="project-title">Inside Bankai Series — Culture, People & Purpose</div>
+        <div class="project-company">Bankai Group · Social Media Series</div>
+        <div class="project-result">EVP Programme</div>
+        <a class="project-link" href="https://ankitbishnudash.notion.site/Employee-Value-Proposition-Inside-Bankai-Infotech-Series-Culture-People-Purpose-25d81b27278080fc8c3ee827f8dc25ef" target="_blank" rel="noopener">View Project →</a>
+      </div>
+
+      <div class="project-card" data-cat="brand">
+        <div class="project-cat">Employer Branding</div>
+        <div class="project-title">#SheLeads — Women Leaders Initiative at Bankai</div>
+        <div class="project-company">Bankai Group · DE&I Campaign</div>
+        <div class="project-result">DE&I Leadership</div>
+        <a class="project-link" href="https://ankitbishnudash.notion.site/Employee-Value-Proposition-SheLeads-25d81b2727808006a4d2e45a1beec9c7" target="_blank" rel="noopener">View Project →</a>
+      </div>
+
+      <div class="project-card" data-cat="brand">
+        <div class="project-cat">Employer Branding</div>
+        <div class="project-title">Visionaries at Work — Video Thought Leadership Series</div>
+        <div class="project-company">Bankai Group · LinkedIn Video</div>
+        <div class="project-result">Thought Leadership</div>
+        <a class="project-link" href="https://ankitbishnudash.notion.site/Employee-Value-Proposition-Visionaries-at-Work-Video-Series-25d81b2727808045bcd0f2e1fd6e6cd8" target="_blank" rel="noopener">View Project →</a>
+      </div>
+
+      <div class="project-card" data-cat="brand">
+        <div class="project-cat">Employer Branding</div>
+        <div class="project-title">Building Bankai's LinkedIn Presence to 100K Followers</div>
+        <div class="project-company">Bankai Group · LinkedIn Growth</div>
+        <div class="project-result">100K Follower Goal</div>
+        <a class="project-link" href="https://ankitbishnudash.notion.site/Building-Bankai-s-LinkedIn-Presence-to-100K-Followers-25d81b2727808078a7fbd758841b9c28" target="_blank" rel="noopener">View Project →</a>
+      </div>
+
+      <!-- STRATEGY & ENABLEMENT -->
+      <div class="project-card" data-cat="strategy">
+        <div class="project-cat">Strategy & Enablement</div>
+        <div class="project-title">Interactive & Touch-Sensitive Demo Panel for Live Events</div>
+        <div class="project-company">Bankai Group · Event Marketing</div>
+        <div class="project-result">Live Event Innovation</div>
+        <a class="project-link" href="https://ankitbishnudash.notion.site/Created-an-interactive-and-touch-sensitive-demo-panel-for-live-events-26281b27278080588bc7d3ecc80c1131" target="_blank" rel="noopener">View Project →</a>
+      </div>
+
+      <div class="project-card" data-cat="strategy">
+        <div class="project-cat">Strategy & Enablement</div>
+        <div class="project-title">Persona Mapping, Pain Points & KPI Framework for ICP Targeting</div>
+        <div class="project-company">Bankai Group · GTM Strategy</div>
+        <div class="project-result">ICP Framework Built</div>
+        <a class="project-link" href="https://ankitbishnudash.notion.site/Developed-Persona-Mapping-pinpointed-Pain-Points-and-set-KPIs-to-effectively-connect-with-the-ICPs-26381b272780802db378d9021122b0b6" target="_blank" rel="noopener">View Project →</a>
+      </div>
+
+      <div class="project-card" data-cat="strategy">
+        <div class="project-cat">Strategy & Enablement</div>
+        <div class="project-title">ABM Playbook — Active in Netcore's US & APAC Markets</div>
+        <div class="project-company">Netcore Cloud · ABM Framework</div>
+        <div class="project-result">Playbook Deployed</div>
+        <a class="project-link" href="https://ankitbishnudash.notion.site/Developed-an-ABM-Playbook-that-is-currently-being-utilized-by-Netcore-for-the-U-S-and-APAC-markets-26481b27278080d486a8fb71ec963797" target="_blank" rel="noopener">View Project →</a>
+      </div>
+
+      <!-- CREATIVE & DESIGN -->
+      <div class="project-card" data-cat="creative">
+        <div class="project-cat">Creative & Design</div>
+        <div class="project-title">MobiFin Brochure Designed for Events & Client Meetings</div>
+        <div class="project-company">Bankai / MobiFin · Event Collateral</div>
+        <div class="project-result">Print + Digital Asset</div>
+        <a class="project-link" href="https://ankitbishnudash.notion.site/Created-and-designed-the-MobiFin-brochure-for-use-at-events-and-personal-meetings-26481b27278080778da6d23d8d42e55e" target="_blank" rel="noopener">View Project →</a>
+      </div>
+
+      <div class="project-card" data-cat="creative">
+        <div class="project-cat">Creative & Design</div>
+        <div class="project-title">Sophisticated FinTech Product Brochures for Events & Client Meetings</div>
+        <div class="project-company">Bankai Group · FinTech Collateral</div>
+        <div class="project-result">Multi-Product Suite</div>
+        <a class="project-link" href="https://ankitbishnudash.notion.site/Created-a-variety-of-sophisticated-Fintech-product-brochures-meticulously-designed-for-events-and-c-26981b27278080f08584f2be7eb69780" target="_blank" rel="noopener">View Project →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── DEEP CASE STUDIES ──────────────────────────────────────── -->
+<section id="cases" class="section">
+  <div class="container">
+    <div class="section-label">Deep Dives</div>
+    <h2 class="section-title">Campaigns That<br/><em>Moved the Needle</em></h2>
+    <p class="section-subtitle">Three landmark campaigns — breaking down strategy, execution and outcome.</p>
+    <div class="cases-grid">
+      <div class="case-card reveal">
+        <div class="case-badge">1:Many + 1:1 ABM · $2M USD</div>
+        <div class="case-title">City Bank Bangladesh — $2M Partnership</div>
+        <div class="case-company">Bankai Group / MobiFin &nbsp;·&nbsp; Aug 2024 &nbsp;·&nbsp; APAC Banking</div>
+        <p class="case-body">Designed a hybrid ABM campaign targeting APAC banking decision-makers with tailored content on digital lending. Built an ongoing content engagement stream and hosted a strategic webinar. The campaign generated 7 high-value meeting requests and culminated in a landmark deal — the largest single contract in the pipeline.</p>
+        <div class="case-result">$2M USD Closed<small>7 meeting requests · Strategic APAC banking partnership</small></div>
+      </div>
+      <div class="case-card reveal">
+        <div class="case-badge">1:1 ABM — SQL Revival</div>
+        <div class="case-title">Walmart Global — $50K MRR in 30 Days</div>
+        <div class="case-company">Netcore Cloud &nbsp;·&nbsp; 7-Month Campaign &nbsp;·&nbsp; US Enterprise</div>
+        <p class="case-body">Revived a dormant SQL-stage Walmart Global account with a deeply personalised ABM approach: custom landing pages, competitor benchmarking reports, global case studies, and strategic industry event participation. A patient 7-month nurture converted to an active customer at scale.</p>
+        <div class="case-result">$50K MRR Secured<small>Dormant account revived · Closed within 30 days post-campaign</small></div>
+      </div>
+      <div class="case-card reveal">
+        <div class="case-badge">AI-Powered Search · 6 Months</div>
+        <div class="case-title">Halon — Brand Visibility 5% → 39%</div>
+        <div class="case-company">Halon &nbsp;·&nbsp; 6-Month Initiative &nbsp;·&nbsp; Cybersecurity SaaS</div>
+        <p class="case-body">Designed an AI-driven search and content strategy to elevate Halon's brand presence in LLM-based search results. Produced TOFU content tailored for next-gen search algorithms, combined with innovative campaign formats including interactive and meme-driven creatives.</p>
+        <div class="case-result">5% → 39% Brand Mentions<small>110% website traffic uplift · AI-first content strategy</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── THE PROOF IS IN THE PEOPLE ────────────────────────────── -->
+<section id="recommendations">
+  <div class="container">
+    <div class="section-label">Social Proof</div>
+    <h2 class="section-title">The Proof Is<br/><em>In the People.</em></h2>
+    <p class="section-subtitle">Not just metrics — the humans behind the work. 22+ LinkedIn recommendations spanning 4 continents and every level of leadership.</p>
+
+    <!-- Stats strip -->
+    <div class="recs-stats">
+      <div class="rec-stat"><span class="rec-stat-num">22+</span><span class="rec-stat-label">LinkedIn Recommendations</span></div>
+      <div class="rec-stat"><span class="rec-stat-num">4</span><span class="rec-stat-label">Continents Represented</span></div>
+      <div class="rec-stat"><span class="rec-stat-num">9+</span><span class="rec-stat-label">Years of Trust Built</span></div>
+      <div class="rec-stat"><span class="rec-stat-num">30K+</span><span class="rec-stat-label">LinkedIn Followers</span></div>
+    </div>
+
+    <!-- Featured spotlight quote -->
+    <div class="rec-spotlight reveal">
+      <span class="rec-spotlight-badge">⭐ Featured</span>
+      <p class="rec-spotlight-text">"I can confidently say he sets a very high benchmark in Account-Based Marketing and Performance Marketing. He consistently delivered strong results within committed timelines, without ever compromising on quality or depth."</p>
+      <div class="rec-spotlight-author">
+        <div class="rec-spotlight-avatar">AT</div>
+        <div>
+          <div class="rec-spotlight-name">Anuj Trivedi</div>
+          <div class="rec-spotlight-role">Senior Marketing Manager · Worked together for 2+ years</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wall of Love — masonry grid -->
+    <div class="wall-of-love reveal">
+
+      <div class="wol-card">
+        <div class="wol-stars">★★★★★</div>
+        <p class="wol-text">"Ankit is a key part of the marketing team at Bankai Group / MobiFin. He's sharp, proactive, and always aligned with what the sales team needs to succeed. He's easy to work with, brings great energy, and is always willing to go the extra mile."</p>
+        <div class="wol-author"><div class="wol-avatar">AF</div><div><div class="wol-name">Alejandro José Flores Flores</div><div class="wol-role">Business Advisor & FinTech Solution Seller · Bankai</div></div></div>
+      </div>
+
+      <div class="wol-card">
+        <div class="wol-stars">★★★★★</div>
+        <p class="wol-text">"He has a ton of expertise but is extremely humble and very open to discussing new ideas. His speed of execution is truly what sets him apart. I wish all the very best in his career."</p>
+        <div class="wol-author"><div class="wol-avatar">KR</div><div><div class="wol-name">Krish Ramachandran</div><div class="wol-role">Founder-CEO @ JazzHQ · Freshworks alum · Angel Investor</div></div></div>
+      </div>
+
+      <div class="wol-card">
+        <div class="wol-stars">★★★★★</div>
+        <p class="wol-text">"Awesome ABM Marketer, humble to the core and scrappiest copywriter — combinations of qualities that are rare to find. Highly recommended for Enterprise Marketing, ABM Campaigns and sheer fun while working."</p>
+        <div class="wol-author"><div class="wol-avatar">AV</div><div><div class="wol-name">Ayush Verma</div><div class="wol-role">150x Brands · $90M+ Revenue · Strategic Marketing</div></div></div>
+      </div>
+
+      <div class="wol-card">
+        <div class="wol-stars">★★★★★</div>
+        <p class="wol-text">"ABD's unique blend of creative thinking and attention to results makes him a go-to marketer for his colleagues. Fun fact: His memes on LinkedIn are witty and chuckle worthy."</p>
+        <div class="wol-author"><div class="wol-avatar">AG</div><div><div class="wol-name">Arun Gopalaswami</div><div class="wol-role">Product & Growth Strategist · B2B, CRM, AI, ABM & GTM</div></div></div>
+      </div>
+
+      <div class="wol-card">
+        <div class="wol-stars">★★★★★</div>
+        <p class="wol-text">"Ankit's experience in ABM campaigns in the UK Market helped us receive double digit inbound leads in Q1 itself. His expertise in understanding market needs makes him a very valuable asset for any GTM team."</p>
+        <div class="wol-author"><div class="wol-avatar">JG</div><div><div class="wol-name">Jithin George</div><div class="wol-role">Revenue Enablement · SDR Training · Global Markets</div></div></div>
+      </div>
+
+      <div class="wol-card">
+        <div class="wol-stars">★★★★★</div>
+        <p class="wol-text">"I highly recommend ABD as an exceptional Account Based Marketer, LinkedIn ads expert, and demand generation specialist. His copywriting skills are outstanding with a keen eye for crafting compelling content that resonates with target audiences."</p>
+        <div class="wol-author"><div class="wol-avatar">JP</div><div><div class="wol-name">Jikkumon Philipose</div><div class="wol-role">Account-Based Marketing · GTM · Demand Generation Expert</div></div></div>
+      </div>
+
+      <div class="wol-card">
+        <div class="wol-stars">★★★★★</div>
+        <p class="wol-text">"Ankit has a natural talent for generating highly qualified inbound leads. His knowledge of Account Based Marketing is on par. He always fulfilled all of my requests on MQLs with great speed. He is one of the nicest people to work with."</p>
+        <div class="wol-author"><div class="wol-avatar">AN</div><div><div class="wol-name">Alston Nadar</div><div class="wol-role">Regional Director – APAC at MongoDB</div></div></div>
+      </div>
+
+      <div class="wol-card">
+        <div class="wol-stars">★★★★★</div>
+        <p class="wol-text">"Ankit was a key member of the ABM team at both Netcore and Panamax, where he showed remarkable talent in targeted marketing campaigns. His unique blend of creative thinking and attention to results makes him a go-to marketer."</p>
+        <div class="wol-author"><div class="wol-avatar">OS</div><div><div class="wol-name">Omkar Sakpal</div><div class="wol-role">GTM, Product, Growth · Netcore Cloud</div></div></div>
+      </div>
+
+    </div>
+
+    <!-- LinkedIn CTA -->
+    <div class="recs-linkedin-cta">
+      <a href="https://www.linkedin.com/in/ankitbishnudash/" target="_blank" class="recs-linkedin-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        Read all 22+ recommendations on LinkedIn
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── AWARDS & GALLERY ───────────────────────────────────────── -->
+<section id="awards" class="section">
+  <div class="container">
+    <div class="section-label">Recognition</div>
+    <h2 class="section-title">Honours, Awards<br/><em>& Moments</em></h2>
+    <div class="awards-layout">
+      <div class="award-cards-col reveal">
+        <div class="award-card">
+          <div class="award-icon">🏆</div>
+          <div class="award-info"><div class="award-title">The Collaborative Trailblazer Award</div><div class="award-org">Bankai Group / MobiFin · Jan–May 2025 · With Trophy</div></div>
+        </div>
+        <div class="award-card">
+          <div class="award-icon">⭐</div>
+          <div class="award-info"><div class="award-title">Star Performer Award — Q1 2023</div><div class="award-org">Netcore Cloud · ABM (North America) · Bangalore</div></div>
+        </div>
+        <div class="award-card">
+          <div class="award-icon">⭐</div>
+          <div class="award-info"><div class="award-title">Star Performer Award — Q4 2023–24</div><div class="award-org">Netcore Cloud · ABM (Northern USA) · Bangalore</div></div>
+        </div>
+        <div class="award-card">
+          <div class="award-icon">🎖️</div>
+          <div class="award-info"><div class="award-title">Certificate of Appreciation</div><div class="award-org">Netcore Cloud · December 2023 · Signed by CMO</div></div>
+        </div>
+        <div class="award-card">
+          <div class="award-icon">🥇</div>
+          <div class="award-info"><div class="award-title">Certificate of Excellence</div><div class="award-org">Bankai Group · May 2025 · Leadership Recognition</div></div>
+        </div>
+        <div class="award-card">
+          <div class="award-icon">📜</div>
+          <div class="award-info"><div class="award-title">ABM — US Market Certificate</div><div class="award-org">Netcore Cloud · LinkedIn Verified Credential</div></div>
+        </div>
+      </div>
+
+      <div class="award-gallery-col reveal">
+        <div class="gallery-img">
+          <img src="assets/award-netcore-q1.jpg" alt="Netcore Star Performer Q1 2023"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="gallery-placeholder" style="display:none">award-netcore-q1.jpg<br/>(Star Performer Q1)</div>
+        </div>
+        <div class="gallery-img">
+          <img src="assets/award-netcore-q4.jpg" alt="Netcore Star Performer Q4 2023-24"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="gallery-placeholder" style="display:none">award-netcore-q4.jpg<br/>(Star Performer Q4)</div>
+        </div>
+        <div class="gallery-img">
+          <img src="assets/award-netcore-appreciation.jpg" alt="Netcore Certificate of Appreciation"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="gallery-placeholder" style="display:none">award-netcore-appreciation.jpg<br/>(Certificate of Appreciation)</div>
+        </div>
+        <div class="gallery-img">
+          <img src="assets/award-bankai-trophy.jpg" alt="Bankai Collaborative Trailblazer Award"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="gallery-placeholder" style="display:none">award-bankai-trophy.jpg<br/>(Trailblazer Trophy)</div>
+        </div>
+        <div class="gallery-img wide">
+          <img src="assets/award-ceremony.jpg" alt="Award Ceremony — Receiving Trailblazer Award"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="gallery-placeholder" style="display:none">award-ceremony.jpg<br/>(Award Ceremony Photo)</div>
+        </div>
+        <div class="gallery-img wide">
+          <img src="assets/photo-presenting.jpg" alt="Presenting MobiFin Brand Transition"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="gallery-placeholder" style="display:none">photo-presenting.jpg<br/>(Presenting at event)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SKILLS (FIX #7 — AI Tools added) ──────────────────────── -->
+<section id="skills" class="section">
+  <div class="container">
+    <div class="section-label">Toolkit</div>
+    <h2 class="section-title">Skills & Expertise</h2>
+
+    <div class="skills-section reveal">
+      <div class="skills-heading">🤖 AI Tools for Marketers</div>
+      <div class="skills-tags">
+        <span class="skill-tag ai-tool">✦ Claude Code</span>
+        <span class="skill-tag ai-tool">✦ Claude Cowork</span>
+        <span class="skill-tag ai-tool">ChatGPT / GPT-4</span>
+        <span class="skill-tag ai-tool">Perplexity AI</span>
+        <span class="skill-tag ai-tool">Jasper AI</span>
+        <span class="skill-tag ai-tool">Copy.ai</span>
+        <span class="skill-tag ai-tool">Midjourney</span>
+        <span class="skill-tag ai-tool">Canva AI</span>
+        <span class="skill-tag ai-tool">Notion AI</span>
+        <span class="skill-tag ai-tool">HubSpot AI</span>
+        <span class="skill-tag ai-tool">Lavender (AI Email)</span>
+        <span class="skill-tag ai-tool">Surfer SEO</span>
+        <span class="skill-tag ai-tool">Clearbit / Clay</span>
+      </div>
+    </div>
+
+    <div class="skills-section reveal">
+      <div class="skills-heading">Strategy & Campaigns</div>
+      <div class="skills-tags">
+        <span class="skill-tag">Account-Based Marketing (ABM)</span>
+        <span class="skill-tag">Demand Generation</span>
+        <span class="skill-tag">Go-To-Market Strategy</span>
+        <span class="skill-tag">Performance Marketing</span>
+        <span class="skill-tag">Brand Positioning</span>
+        <span class="skill-tag">Content Strategy</span>
+        <span class="skill-tag">Sales Enablement</span>
+        <span class="skill-tag">Global Market Expansion</span>
+        <span class="skill-tag">Pipeline & Revenue Growth</span>
+      </div>
+    </div>
+
+    <div class="skills-section reveal">
+      <div class="skills-heading">Platforms & CRM</div>
+      <div class="skills-tags">
+        <span class="skill-tag">HubSpot</span>
+        <span class="skill-tag">Salesforce</span>
+        <span class="skill-tag">Pardot</span>
+        <span class="skill-tag">Microsoft Dynamics</span>
+        <span class="skill-tag">Outreach</span>
+        <span class="skill-tag">Triblio</span>
+        <span class="skill-tag">RollWorks</span>
+        <span class="skill-tag">Demandbase</span>
+        <span class="skill-tag">Terminus</span>
+        <span class="skill-tag">Influ2</span>
+      </div>
+    </div>
+
+    <div class="skills-section reveal">
+      <div class="skills-heading">Paid Media & SEO</div>
+      <div class="skills-tags">
+        <span class="skill-tag">Google Ads</span>
+        <span class="skill-tag">LinkedIn Ads</span>
+        <span class="skill-tag">SEO / SEM</span>
+        <span class="skill-tag">Paid Search</span>
+        <span class="skill-tag">Retargeting</span>
+        <span class="skill-tag">Campaign Optimization</span>
+        <span class="skill-tag">CRO</span>
+        <span class="skill-tag">A/B Testing</span>
+      </div>
+    </div>
+
+    <div class="skills-section reveal">
+      <div class="skills-heading">Data & Intelligence</div>
+      <div class="skills-tags">
+        <span class="skill-tag">DiscoverOrg</span>
+        <span class="skill-tag">Apollo.io</span>
+        <span class="skill-tag">Lead Scoring</span>
+        <span class="skill-tag">List Building</span>
+        <span class="skill-tag">Funnel Analysis</span>
+        <span class="skill-tag">Marketing Analytics</span>
+        <span class="skill-tag">SQL</span>
+        <span class="skill-tag">HTML / CMS</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT (FIX #4 — mailto) ─────────────────────────────── -->
+<section id="contact">
+  <div class="section-label">Let's Connect</div>
+  <h2 class="section-title" style="margin-bottom:.5rem">Ready to Build Something<br/><em style="font-family:var(--font-serif)">Extraordinary?</em></h2>
+  <p class="contact-sub">Whether you're looking for an ABM leader, demand gen strategist, or a marketing partner who brings both creativity and rigour — I'd love to hear from you.</p>
+  <div class="contact-links">
+    <a class="contact-link primary" href="mailto:ankitbishnudash@gmail.com">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      Send Me an Email
+    </a>
+    <a class="contact-link" href="https://linkedin.com/in/iamankitbishnudash" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+      LinkedIn · 30K+ Followers
+    </a>
+    <a class="contact-link" href="assets/Ankit_Bishnu_Dash_ATS_CV.docx" download>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download CV
+    </a>
+  </div>
+</section>
+
+<!-- ── FOOTER ──────────────────────────────────────────────────── -->
+<footer>
+  <p>Crafted with ♥ by Ankit Bishnu Dash &nbsp;·&nbsp;
+    <a href="https://linkedin.com/in/iamankitbishnudash" target="_blank" rel="noopener">LinkedIn</a>
+    &nbsp;·&nbsp;
+    <a href="mailto:ankitbishnudash@gmail.com">ankitbishnudash@gmail.com</a>
+    &nbsp;·&nbsp; Bengaluru, India
+  </p>
+</footer>
+
+<!-- ── SCRIPTS ─────────────────────────────────────────────────── -->
+<script>
+  /* Hello animation */
+  const hellos=[
+    {word:'Hello',lang:'English'},{word:'नमस्ते',lang:'Hindi'},{word:'ନମସ୍କାର',lang:'Odia'},
+    {word:'Hola',lang:'Spanish'},{word:'Bonjour',lang:'French'},{word:'Ciao',lang:'Italian'},
+    {word:'こんにちは',lang:'Japanese'},{word:'안녕하세요',lang:'Korean'},{word:'مرحبا',lang:'Arabic'},
+    {word:'Hallo',lang:'German'},{word:'Olá',lang:'Portuguese'},{word:'Merhaba',lang:'Turkish'},
+    {word:'Привет',lang:'Russian'},{word:'你好',lang:'Chinese'}
+  ];
+  let hIdx=0;
+  const hEl=document.getElementById('hello-word');
+  const hLang=document.getElementById('hello-lang');
+  function cycleHello(){
+    hEl.classList.add('hello-fade-out');
+    setTimeout(()=>{
+      hIdx=(hIdx+1)%hellos.length;
+      hEl.textContent=hellos[hIdx].word;
+      hLang.textContent='· '+hellos[hIdx].lang;
+      hEl.classList.remove('hello-fade-out');
+      hEl.classList.add('hello-fade-in');
+      setTimeout(()=>hEl.classList.remove('hello-fade-in'),350);
+    },320);
+  }
+  setInterval(cycleHello,1900);
+
+  /* Scroll reveal */
+  const revEls=document.querySelectorAll('.reveal');
+  const ro=new IntersectionObserver((entries)=>{
+    entries.forEach((e,i)=>{
+      if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*80);ro.unobserve(e.target)}
+    });
+  },{threshold:.12});
+  revEls.forEach(el=>ro.observe(el));
+
+  /* Counter */
+  const cEls=document.querySelectorAll('[data-target]');
+  const co=new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(!entry.isIntersecting)return;
+      const el=entry.target;
+      const target=parseFloat(el.dataset.target);
+      const prefix=el.dataset.prefix||'';
+      const suffix=el.dataset.suffix||'';
+      let current=0;const steps=1800/16;const inc=target/steps;
+      const t=setInterval(()=>{
+        current+=inc;if(current>=target){current=target;clearInterval(t)}
+        el.textContent=prefix+(target%1===0?Math.floor(current):current.toFixed(1))+suffix;
+      },16);
+      co.unobserve(el);
+    });
+  },{threshold:.4});
+  cEls.forEach(el=>co.observe(el));
+
+  /* Projects filter */
+  const filterBtns=document.querySelectorAll('.filter-btn');
+  const projectCards=document.querySelectorAll('.project-card');
+  filterBtns.forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      filterBtns.forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      const f=btn.dataset.filter;
+      projectCards.forEach(card=>{
+        if(f==='all'||card.dataset.cat===f){
+          card.removeAttribute('data-hidden');
+          card.style.display='';
+        } else {
+          card.dataset.hidden='true';
+          card.style.display='none';
+        }
+      });
+    });
+  });
+
+  /* Mobile nav */
+  document.getElementById('hamburger').addEventListener('click',()=>{
+    document.getElementById('mobileMenu').classList.toggle('open');
+  });
+  function closeMobileMenu(){document.getElementById('mobileMenu').classList.remove('open')}
+</script>
+</body>
+</html>
