@@ -74,10 +74,10 @@
     .hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;max-width:1100px;margin:0 auto;padding:4rem 2rem;width:100%;position:relative;z-index:1}
 
     /* FIX #1 — Hello in small Comic Sans */
-    .hero-greeting{font-family:var(--font-comic);font-size:clamp(1.4rem,2.5vw,2rem);font-weight:700;font-style:italic;color:var(--peach-dark);letter-spacing:.04em;margin-bottom:.4rem;display:flex;align-items:center;gap:.5rem}
+    .hero-greeting{font-family:var(--font-comic);font-size:clamp(1.4rem,2.5vw,2rem);font-weight:400;font-style:italic;color:var(--peach-dark);letter-spacing:.04em;margin-bottom:.4rem;display:flex;align-items:center;gap:.5rem}
     .hero-greeting .wave{display:inline-block;animation:wave 2s ease-in-out infinite}
     @keyframes wave{0%,100%{transform:rotate(0deg)}25%{transform:rotate(18deg)}75%{transform:rotate(-10deg)}}
-    .hero-greeting .word{display:inline-block}
+    .hero-greeting .word{display:inline-block;font-weight:400;font-style:normal;font-size:clamp(1.4rem,2.5vw,2rem)}
     .hello-fade-out{animation:fadeSlideOut .3s ease forwards}
     .hello-fade-in{animation:fadeSlideIn .3s ease forwards}
     @keyframes fadeSlideOut{from{opacity:1;transform:translateY(0)}to{opacity:0;transform:translateY(-14px)}}
@@ -205,10 +205,9 @@
     .case-result small{display:block;font-family:var(--font-body);font-size:.75rem;color:var(--peach);font-weight:400;letter-spacing:0;margin-top:.2rem}
 
     /* ── "THE PROOF IS IN THE PEOPLE" — BOLD redesign ───── */
-    /* ── SOCIAL PROOF (Wall of Love) ───────────────────────── */
+    /* ── SOCIAL PROOF (Impactful Carousel) ─────────────────── */
     #recommendations{background:var(--brown);position:relative;overflow:hidden;padding:6rem 0}
     #recommendations::before{content:'';position:absolute;top:-80px;right:-80px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(255,179,138,.07) 0%,transparent 70%);pointer-events:none}
-    #recommendations::after{content:'';position:absolute;bottom:-60px;left:-60px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(255,140,90,.05) 0%,transparent 70%);pointer-events:none}
     #recommendations .section-label{color:var(--peach)}
     #recommendations .section-title{color:var(--cream)}
     #recommendations .section-subtitle{color:rgba(255,232,214,.65)}
@@ -218,25 +217,26 @@
     .rec-stat:last-child{border-right:none}
     .rec-stat-num{font-family:var(--font-display);font-size:3.5rem;color:var(--peach-light);display:block;line-height:1;letter-spacing:.03em}
     .rec-stat-label{font-family:var(--font-comic);font-size:.78rem;color:rgba(255,203,164,.6);margin-top:.3rem;display:block}
-    /* Spotlight featured quote */
-    .rec-spotlight{position:relative;border:1px solid rgba(255,179,138,.22);border-radius:28px;padding:3rem 3.5rem;margin-bottom:3rem;background:rgba(255,179,138,.06);overflow:hidden}
-    .rec-spotlight::before{content:'\201C';font-family:var(--font-serif);font-size:12rem;color:var(--peach-dark);opacity:.12;position:absolute;top:-2rem;left:1.5rem;line-height:1;pointer-events:none}
-    .rec-spotlight-text{font-family:var(--font-serif);font-style:italic;font-size:clamp(1.15rem,2.2vw,1.55rem);color:var(--cream);line-height:1.65;margin-bottom:2rem;position:relative;z-index:1}
-    .rec-spotlight-author{display:flex;align-items:center;gap:1rem;position:relative;z-index:1}
-    .rec-spotlight-avatar{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--peach),var(--coral));display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1.3rem;color:var(--cream);flex-shrink:0;border:2px solid rgba(255,179,138,.3)}
-    .rec-spotlight-name{font-family:var(--font-body);font-weight:700;font-size:1rem;color:var(--peach-light)}
-    .rec-spotlight-role{font-family:var(--font-comic);font-size:.8rem;color:rgba(255,203,164,.6);margin-top:.15rem}
-    .rec-spotlight-badge{position:absolute;top:1.6rem;right:2rem;background:rgba(255,179,138,.15);border:1px solid rgba(255,179,138,.25);border-radius:50px;padding:.35rem .9rem;font-family:var(--font-comic);font-size:.7rem;color:var(--peach);letter-spacing:.06em}
-    /* Wall of Love grid */
-    .wall-of-love{columns:3 320px;gap:1.4rem}
-    .wol-card{break-inside:avoid;background:rgba(255,248,243,.05);border:1px solid rgba(255,179,138,.14);border-radius:20px;padding:1.5rem 1.6rem;margin-bottom:1.4rem;transition:background .3s,border-color .3s}
-    .wol-card:hover{background:rgba(255,179,138,.1);border-color:rgba(255,179,138,.3)}
-    .wol-stars{color:var(--peach);font-size:.75rem;letter-spacing:.05em;margin-bottom:.7rem}
-    .wol-text{font-family:var(--font-comic);font-size:.875rem;color:rgba(255,232,214,.82);line-height:1.7;font-style:italic;margin-bottom:1.1rem}
-    .wol-author{display:flex;align-items:center;gap:.65rem}
-    .wol-avatar{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--peach-dark),var(--brown-mid));display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:.85rem;color:var(--cream);flex-shrink:0}
-    .wol-name{font-weight:600;font-size:.82rem;color:var(--peach-light)}
-    .wol-role{font-size:.7rem;color:rgba(255,203,164,.5)}
+    /* Carousel wrapper */
+    .recs-carousel-wrap{position:relative;margin-top:1rem}
+    .recs-slides{display:flex;transition:transform .5s cubic-bezier(.4,0,.2,1)}
+    .rec-slide{min-width:100%;padding:0 .5rem;box-sizing:border-box}
+    /* Big card */
+    .rec-big-card{border:1px solid rgba(255,179,138,.2);border-radius:28px;padding:3rem 3.5rem;background:rgba(255,179,138,.06);position:relative;overflow:hidden}
+    .rec-big-card::before{content:'\201C';font-family:var(--font-serif);font-size:14rem;color:var(--peach-dark);opacity:.1;position:absolute;top:-3rem;left:1rem;line-height:1;pointer-events:none}
+    .rec-big-text{font-family:var(--font-serif);font-style:italic;font-size:clamp(1.1rem,2.2vw,1.5rem);color:var(--cream);line-height:1.7;margin-bottom:2rem;position:relative;z-index:1;max-width:820px}
+    .rec-big-author{display:flex;align-items:center;gap:1.1rem;position:relative;z-index:1}
+    .rec-big-avatar{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--peach),var(--coral));display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1.4rem;color:var(--cream);flex-shrink:0;border:2px solid rgba(255,179,138,.3)}
+    .rec-big-name{font-family:var(--font-body);font-weight:700;font-size:1rem;color:var(--peach-light)}
+    .rec-big-role{font-family:var(--font-comic);font-size:.78rem;color:rgba(255,203,164,.55);margin-top:.2rem}
+    .rec-big-stars{position:absolute;top:2rem;right:2.5rem;color:var(--peach);font-size:.9rem;letter-spacing:.1em;opacity:.7}
+    /* Carousel controls */
+    .recs-controls{display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:2.2rem}
+    .recs-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,179,138,.25);border:none;cursor:pointer;transition:all .3s;padding:0}
+    .recs-dot.active{width:28px;border-radius:4px;background:var(--peach)}
+    .recs-arrow{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(255,179,138,.3);background:rgba(255,179,138,.08);color:var(--peach-light);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .3s;font-size:1rem}
+    .recs-arrow:hover{background:rgba(255,179,138,.2);border-color:rgba(255,179,138,.6)}
+    /* LinkedIn CTA */
     .recs-linkedin-cta{text-align:center;margin-top:3rem}
     .recs-linkedin-btn{display:inline-flex;align-items:center;gap:.6rem;padding:.85rem 2.2rem;border-radius:50px;border:1.5px solid rgba(255,179,138,.35);color:var(--peach-light);font-family:var(--font-body);font-weight:600;font-size:.9rem;transition:all .3s;background:rgba(255,179,138,.08)}
     .recs-linkedin-btn:hover{background:rgba(255,179,138,.2);border-color:rgba(255,179,138,.6);transform:translateY(-2px)}
@@ -252,13 +252,12 @@
     .award-icon{font-size:1.8rem;flex-shrink:0}
     .award-info .award-title{font-family:var(--font-serif);font-size:1rem;font-weight:600;color:var(--cream);margin-bottom:.15rem}
     .award-info .award-org{font-size:.78rem;color:var(--peach);font-family:var(--font-comic)}
-    .award-gallery-col{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
-    .gallery-img{border-radius:14px;overflow:hidden;background:rgba(255,179,138,.1);border:1px solid rgba(255,179,138,.2)}
-    .gallery-img img{width:100%;height:auto;display:block;object-fit:contain;transition:transform .4s ease}
+    .award-gallery-col{columns:2;gap:.8rem;column-gap:.8rem}
+    .gallery-img{break-inside:avoid;margin-bottom:.8rem;border-radius:14px;overflow:hidden;background:rgba(255,179,138,.06);border:1px solid rgba(255,179,138,.2);position:relative}
+    .gallery-img img{width:100%;height:auto;display:block;transition:transform .4s ease}
     .gallery-img:hover img{transform:scale(1.03)}
-    .gallery-img.wide{grid-column:1/-1}
-    .gallery-img.portrait{grid-row:span 2}
-    .gallery-placeholder{min-height:160px;display:flex;align-items:center;justify-content:center;font-family:var(--font-comic);font-size:.72rem;color:rgba(255,232,214,.4);text-align:center;padding:.5rem}
+    .gallery-img.wide{column-span:none}
+    .gallery-placeholder{min-height:140px;display:flex;align-items:center;justify-content:center;font-family:var(--font-comic);font-size:.72rem;color:rgba(45,27,14,.3);text-align:center;padding:.5rem}
 
     /* ── SKILLS (FIX #7) ─────────────────────────────────── */
     #skills{background:var(--cream)}
@@ -355,8 +354,8 @@
       <div class="hero-name">Ankit Bishnu Dash</div>
       <div class="hero-title">Global ABM & Marketing Leader &nbsp;·&nbsp; Pipeline Architect &nbsp;·&nbsp; Demand Generation</div>
       <p class="hero-tagline">
-        9+ years turning <strong>strategy into revenue</strong> across FinTech, SaaS & beyond —
-        from <strong>India to the world</strong>. 🌍 APAC · MEA · LATAM · US · Europe.
+        9+ years turning <strong>strategy into revenue</strong> across FinTech, MarTech & SaaS —
+        from <strong>India to the world.</strong> Marketing ICPs across <strong>US, Europe, APAC & MEA.</strong>
       </p>
       <div class="hero-btns">
         <a class="btn btn-primary" href="#projects">See My Work</a>
@@ -373,8 +372,8 @@
         </span>
         <span class="hero-meta-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-          Open to Opportunities · 🇺🇸 US · 🇪🇺 Europe
-        </span>
+          Open to Opportunities · 🇮🇳 India · 🇺🇸 US · 🇪🇺 Europe
+</span>
       </div>
       <!-- Skills in first fold -->
       <div class="hero-skills">
@@ -854,70 +853,90 @@
       <div class="rec-stat"><span class="rec-stat-num">30K+</span><span class="rec-stat-label">LinkedIn Followers</span></div>
     </div>
 
-    <!-- Featured spotlight quote -->
-    <div class="rec-spotlight reveal">
-      <span class="rec-spotlight-badge">⭐ Featured</span>
-      <p class="rec-spotlight-text">"I can confidently say he sets a very high benchmark in Account-Based Marketing and Performance Marketing. He consistently delivered strong results within committed timelines, without ever compromising on quality or depth."</p>
-      <div class="rec-spotlight-author">
-        <div class="rec-spotlight-avatar">AT</div>
-        <div>
-          <div class="rec-spotlight-name">Anuj Trivedi</div>
-          <div class="rec-spotlight-role">Senior Marketing Manager · Worked together for 2+ years</div>
+    <!-- Auto-play carousel of all 9 recommendations -->
+    <div class="recs-carousel-wrap reveal">
+      <div class="recs-slides" id="recsSlides">
+
+        <div class="rec-slide">
+          <div class="rec-big-card">
+            <span class="rec-big-stars">★★★★★</span>
+            <p class="rec-big-text">"I can confidently say he sets a very high benchmark in Account-Based Marketing and Performance Marketing. He consistently delivered strong results within committed timelines, without ever compromising on quality or depth."</p>
+            <div class="rec-big-author"><div class="rec-big-avatar">AT</div><div><div class="rec-big-name">Anuj Trivedi</div><div class="rec-big-role">Senior Marketing Manager · 2+ years together</div></div></div>
+          </div>
         </div>
+
+        <div class="rec-slide">
+          <div class="rec-big-card">
+            <span class="rec-big-stars">★★★★★</span>
+            <p class="rec-big-text">"He has a ton of expertise but is extremely humble and very open to discussing new ideas. His speed of execution is truly what sets him apart. I wish all the very best in his career."</p>
+            <div class="rec-big-author"><div class="rec-big-avatar">KR</div><div><div class="rec-big-name">Krish Ramachandran</div><div class="rec-big-role">Founder-CEO @ JazzHQ · Freshworks alum · Angel Investor</div></div></div>
+          </div>
+        </div>
+
+        <div class="rec-slide">
+          <div class="rec-big-card">
+            <span class="rec-big-stars">★★★★★</span>
+            <p class="rec-big-text">"Ankit is a key part of the marketing team at Bankai Group / MobiFin. He's sharp, proactive, and always aligned with what the sales team needs to succeed. He's easy to work with, brings great energy, and always willing to go the extra mile."</p>
+            <div class="rec-big-author"><div class="rec-big-avatar">AF</div><div><div class="rec-big-name">Alejandro José Flores Flores</div><div class="rec-big-role">Business Advisor & FinTech Solution Seller · Bankai Group</div></div></div>
+          </div>
+        </div>
+
+        <div class="rec-slide">
+          <div class="rec-big-card">
+            <span class="rec-big-stars">★★★★★</span>
+            <p class="rec-big-text">"Awesome ABM Marketer, humble to the core and scrappiest copywriter — combinations of qualities that are rare to find. Highly recommended for Enterprise Marketing, ABM Campaigns and sheer fun while working."</p>
+            <div class="rec-big-author"><div class="rec-big-avatar">AV</div><div><div class="rec-big-name">Ayush Verma</div><div class="rec-big-role">150x Brands · $90M+ Revenue · Strategic Marketing</div></div></div>
+          </div>
+        </div>
+
+        <div class="rec-slide">
+          <div class="rec-big-card">
+            <span class="rec-big-stars">★★★★★</span>
+            <p class="rec-big-text">"ABD's unique blend of creative thinking and attention to results makes him a go-to marketer for his colleagues. Fun fact: His memes on LinkedIn are witty and chuckle worthy."</p>
+            <div class="rec-big-author"><div class="rec-big-avatar">AG</div><div><div class="rec-big-name">Arun Gopalaswami</div><div class="rec-big-role">Product & Growth Strategist · B2B, CRM, AI, ABM & GTM</div></div></div>
+          </div>
+        </div>
+
+        <div class="rec-slide">
+          <div class="rec-big-card">
+            <span class="rec-big-stars">★★★★★</span>
+            <p class="rec-big-text">"Ankit's experience in ABM campaigns in the UK Market helped us receive double digit inbound leads in Q1 itself. His expertise in understanding market needs makes him a very valuable asset for any GTM team."</p>
+            <div class="rec-big-author"><div class="rec-big-avatar">JG</div><div><div class="rec-big-name">Jithin George</div><div class="rec-big-role">Revenue Enablement · SDR Training · Global Markets</div></div></div>
+          </div>
+        </div>
+
+        <div class="rec-slide">
+          <div class="rec-big-card">
+            <span class="rec-big-stars">★★★★★</span>
+            <p class="rec-big-text">"I highly recommend ABD as an exceptional Account Based Marketer, LinkedIn ads expert, and demand generation specialist. His copywriting skills are outstanding with a keen eye for crafting compelling content that resonates with target audiences."</p>
+            <div class="rec-big-author"><div class="rec-big-avatar">JP</div><div><div class="rec-big-name">Jikkumon Philipose</div><div class="rec-big-role">Account-Based Marketing · GTM · Demand Generation Expert</div></div></div>
+          </div>
+        </div>
+
+        <div class="rec-slide">
+          <div class="rec-big-card">
+            <span class="rec-big-stars">★★★★★</span>
+            <p class="rec-big-text">"Ankit has a natural talent for generating highly qualified inbound leads. His knowledge of Account Based Marketing is on par. He always fulfilled all of my requests on MQLs with great speed. He is one of the nicest people to work with."</p>
+            <div class="rec-big-author"><div class="rec-big-avatar">AN</div><div><div class="rec-big-name">Alston Nadar</div><div class="rec-big-role">Regional Director – APAC at MongoDB</div></div></div>
+          </div>
+        </div>
+
+        <div class="rec-slide">
+          <div class="rec-big-card">
+            <span class="rec-big-stars">★★★★★</span>
+            <p class="rec-big-text">"Ankit was a key member of the ABM team at both Netcore and Panamax, where he showed remarkable talent in targeted marketing campaigns. His unique blend of creative thinking and attention to results makes him a go-to marketer."</p>
+            <div class="rec-big-author"><div class="rec-big-avatar">OS</div><div><div class="rec-big-name">Omkar Sakpal</div><div class="rec-big-role">GTM, Product, Growth · Netcore Cloud</div></div></div>
+          </div>
+        </div>
+
       </div>
-    </div>
 
-    <!-- Wall of Love — masonry grid -->
-    <div class="wall-of-love reveal">
-
-      <div class="wol-card">
-        <div class="wol-stars">★★★★★</div>
-        <p class="wol-text">"Ankit is a key part of the marketing team at Bankai Group / MobiFin. He's sharp, proactive, and always aligned with what the sales team needs to succeed. He's easy to work with, brings great energy, and is always willing to go the extra mile."</p>
-        <div class="wol-author"><div class="wol-avatar">AF</div><div><div class="wol-name">Alejandro José Flores Flores</div><div class="wol-role">Business Advisor & FinTech Solution Seller · Bankai</div></div></div>
+      <!-- Prev / dots / Next -->
+      <div class="recs-controls">
+        <button class="recs-arrow" id="recsPrev" aria-label="Previous">&#8592;</button>
+        <div id="recsDots" style="display:flex;gap:.5rem;align-items:center"></div>
+        <button class="recs-arrow" id="recsNext" aria-label="Next">&#8594;</button>
       </div>
-
-      <div class="wol-card">
-        <div class="wol-stars">★★★★★</div>
-        <p class="wol-text">"He has a ton of expertise but is extremely humble and very open to discussing new ideas. His speed of execution is truly what sets him apart. I wish all the very best in his career."</p>
-        <div class="wol-author"><div class="wol-avatar">KR</div><div><div class="wol-name">Krish Ramachandran</div><div class="wol-role">Founder-CEO @ JazzHQ · Freshworks alum · Angel Investor</div></div></div>
-      </div>
-
-      <div class="wol-card">
-        <div class="wol-stars">★★★★★</div>
-        <p class="wol-text">"Awesome ABM Marketer, humble to the core and scrappiest copywriter — combinations of qualities that are rare to find. Highly recommended for Enterprise Marketing, ABM Campaigns and sheer fun while working."</p>
-        <div class="wol-author"><div class="wol-avatar">AV</div><div><div class="wol-name">Ayush Verma</div><div class="wol-role">150x Brands · $90M+ Revenue · Strategic Marketing</div></div></div>
-      </div>
-
-      <div class="wol-card">
-        <div class="wol-stars">★★★★★</div>
-        <p class="wol-text">"ABD's unique blend of creative thinking and attention to results makes him a go-to marketer for his colleagues. Fun fact: His memes on LinkedIn are witty and chuckle worthy."</p>
-        <div class="wol-author"><div class="wol-avatar">AG</div><div><div class="wol-name">Arun Gopalaswami</div><div class="wol-role">Product & Growth Strategist · B2B, CRM, AI, ABM & GTM</div></div></div>
-      </div>
-
-      <div class="wol-card">
-        <div class="wol-stars">★★★★★</div>
-        <p class="wol-text">"Ankit's experience in ABM campaigns in the UK Market helped us receive double digit inbound leads in Q1 itself. His expertise in understanding market needs makes him a very valuable asset for any GTM team."</p>
-        <div class="wol-author"><div class="wol-avatar">JG</div><div><div class="wol-name">Jithin George</div><div class="wol-role">Revenue Enablement · SDR Training · Global Markets</div></div></div>
-      </div>
-
-      <div class="wol-card">
-        <div class="wol-stars">★★★★★</div>
-        <p class="wol-text">"I highly recommend ABD as an exceptional Account Based Marketer, LinkedIn ads expert, and demand generation specialist. His copywriting skills are outstanding with a keen eye for crafting compelling content that resonates with target audiences."</p>
-        <div class="wol-author"><div class="wol-avatar">JP</div><div><div class="wol-name">Jikkumon Philipose</div><div class="wol-role">Account-Based Marketing · GTM · Demand Generation Expert</div></div></div>
-      </div>
-
-      <div class="wol-card">
-        <div class="wol-stars">★★★★★</div>
-        <p class="wol-text">"Ankit has a natural talent for generating highly qualified inbound leads. His knowledge of Account Based Marketing is on par. He always fulfilled all of my requests on MQLs with great speed. He is one of the nicest people to work with."</p>
-        <div class="wol-author"><div class="wol-avatar">AN</div><div><div class="wol-name">Alston Nadar</div><div class="wol-role">Regional Director – APAC at MongoDB</div></div></div>
-      </div>
-
-      <div class="wol-card">
-        <div class="wol-stars">★★★★★</div>
-        <p class="wol-text">"Ankit was a key member of the ABM team at both Netcore and Panamax, where he showed remarkable talent in targeted marketing campaigns. His unique blend of creative thinking and attention to results makes him a go-to marketer."</p>
-        <div class="wol-author"><div class="wol-avatar">OS</div><div><div class="wol-name">Omkar Sakpal</div><div class="wol-role">GTM, Product, Growth · Netcore Cloud</div></div></div>
-      </div>
-
     </div>
 
     <!-- LinkedIn CTA -->
@@ -968,32 +987,32 @@
         <div class="gallery-img">
           <img src="assets/award-netcore-q1.jpg" alt="Netcore Star Performer Q1 2023"
                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-          <div class="gallery-placeholder" style="display:none">award-netcore-q1.jpg<br/>(Star Performer Q1)</div>
+          <div class="gallery-placeholder" style="display:none">award-netcore-q1.jpg</div>
+        </div>
+        <div class="gallery-img">
+          <img src="assets/award-bankai-trophy.jpg" alt="Bankai Collaborative Trailblazer Award"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="gallery-placeholder" style="display:none">award-bankai-trophy.jpg</div>
         </div>
         <div class="gallery-img">
           <img src="assets/award-netcore-q4.jpg" alt="Netcore Star Performer Q4 2023-24"
                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-          <div class="gallery-placeholder" style="display:none">award-netcore-q4.jpg<br/>(Star Performer Q4)</div>
+          <div class="gallery-placeholder" style="display:none">award-netcore-q4.jpg</div>
         </div>
         <div class="gallery-img">
           <img src="assets/award-netcore-appreciation.jpg" alt="Netcore Certificate of Appreciation"
                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-          <div class="gallery-placeholder" style="display:none">award-netcore-appreciation.jpg<br/>(Certificate of Appreciation)</div>
+          <div class="gallery-placeholder" style="display:none">award-netcore-appreciation.jpg</div>
         </div>
-        <div class="gallery-img portrait">
-          <img src="assets/award-bankai-trophy.jpg" alt="Bankai Collaborative Trailblazer Award"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-          <div class="gallery-placeholder" style="display:none">award-bankai-trophy.jpg<br/>(Trailblazer Trophy)</div>
-        </div>
-        <div class="gallery-img wide">
+        <div class="gallery-img">
           <img src="assets/award-ceremony.jpg" alt="Award Ceremony — Receiving Trailblazer Award"
                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-          <div class="gallery-placeholder" style="display:none">award-ceremony.jpg<br/>(Award Ceremony Photo)</div>
+          <div class="gallery-placeholder" style="display:none">award-ceremony.jpg</div>
         </div>
-        <div class="gallery-img wide">
+        <div class="gallery-img">
           <img src="assets/photo-presenting.jpg" alt="Presenting MobiFin Brand Transition"
                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-          <div class="gallery-placeholder" style="display:none">photo-presenting.jpg<br/>(Presenting at event)</div>
+          <div class="gallery-placeholder" style="display:none">photo-presenting.jpg</div>
         </div>
       </div>
     </div>
@@ -1119,6 +1138,32 @@
 
 <!-- ── SCRIPTS ─────────────────────────────────────────────────── -->
 <script>
+  /* Recommendations carousel */
+  (function(){
+    const slides=document.querySelectorAll('.rec-slide');
+    const track=document.getElementById('recsSlides');
+    const dotsWrap=document.getElementById('recsDots');
+    let cur=0,total=slides.length,timer;
+    // build dots
+    slides.forEach((_,i)=>{
+      const d=document.createElement('button');
+      d.className='recs-dot'+(i===0?' active':'');
+      d.addEventListener('click',()=>goTo(i));
+      dotsWrap.appendChild(d);
+    });
+    function goTo(n){
+      cur=(n+total)%total;
+      track.style.transform='translateX(-'+cur*100+'%)';
+      dotsWrap.querySelectorAll('.recs-dot').forEach((d,i)=>d.classList.toggle('active',i===cur));
+    }
+    document.getElementById('recsPrev').addEventListener('click',()=>{clearInterval(timer);goTo(cur-1);startAuto()});
+    document.getElementById('recsNext').addEventListener('click',()=>{clearInterval(timer);goTo(cur+1);startAuto()});
+    function startAuto(){timer=setInterval(()=>goTo(cur+1),5000);}
+    track.closest('.recs-carousel-wrap').addEventListener('mouseenter',()=>clearInterval(timer));
+    track.closest('.recs-carousel-wrap').addEventListener('mouseleave',startAuto);
+    startAuto();
+  })();
+
   /* Hello animation */
   const hellos=[
     {word:'Hello',lang:'English'},{word:'नमस्ते',lang:'Hindi'},{word:'ନମସ୍କାର',lang:'Odia'},
